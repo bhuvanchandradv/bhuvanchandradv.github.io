@@ -40,7 +40,7 @@
 
 
     
-    <link rel="stylesheet" href="/css/dark-style.css?t=1500449938">
+    <link rel="stylesheet" href="/css/dark-style.css?t=1710775205">
     
 
 
@@ -147,63 +147,26 @@
     </div>
 
     <div class="container markdown  fade-in two  top-pad">
-        <nav>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#cross-compiling-libsoc">Cross-compiling libsoc:</a></li>
-<li><a href="#cross-compiling-libsoc-examples">Cross-compiling libsoc examples:</a></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul>
-</nav>
-
-<p><a href="https://www.toradex.com/computer-on-modules/colibri-arm-family/nxp-freescale-vybrid-vf6xx">Colibri VF61</a></p>
-
+        <p><a href="https://www.toradex.com/computer-on-modules/colibri-arm-family/nxp-freescale-vybrid-vf6xx">Colibri VF61</a></p>
 <p>The Colibri VF50 and VF61 are both SODIMM sized computer modules based on the
 Qualcomm/NXP/Freescale Vybrid embedded System-on-Chip (SoC). The Vybrid SoC features a Cortex-A5 processor supporting a clock frequency of up to 500MHz. The Colibri VF61 additionally features a second Cortex-M4 processor core which can be clocked at up 167MHz maximum.</p>
-
 <p>This unique heterogeneous dual core system allows for running a second hard real time operating system on the M4 core for time and security critical tasks. The module tarets a wide range of applications, including: Digital Signage, Medical Devices, Navigation, Industrial Automation, HMIs, Avionics, Entertainment System, POS, Data Acquisition, Thin Clients, Robotics, Gaming and many more. It offers a wide range of interfaces from simple GPIOs, industry standard I2C and SPI buses through to high speed USB 2.0 interfaces.</p>
-
 <p>Both Colibri VFxx modules feature a Fast Ethernet PHY with IEEE1588 time stamping on the module. Additional, a second PHY can be integrated on the customer carrier board by using the RMII interface. Existing customers will benefit from an extremely easy migration path from the current Colibri PXAxxx or Colibri T20/30 module range to the Colibri VFxx – all Colibri modules are electrically pin compatible.</p>
-
-<p><img src="http://docs.toradex.com/101370-freescale-vybrid-vf6xx-computer-on-module.jpg" alt="Colibri VF61" /></p>
-
+<p><img src="http://docs.toradex.com/101370-freescale-vybrid-vf6xx-computer-on-module.jpg" alt="Colibri VF61"></p>
 <p><a href="https://www.toradex.com/products/carrier-boards/aster-carrier-board">Aster Carrier Board</a></p>
-
 <p>Carrier board for <a href="http://www.toradex.com">Toradex</a> Colibri System on Module Family. Good thing about this board is the availability of Arduino Uno and Raspberry Pi expansion headers, which means one can use
 any of the available Arduino/Rpi cape/add-on/hat Boards on this carrier board.</p>
-
 <p>As Colibri Modules are electrically pin compatible, all the modules in Colibri Family can be used. In this example project we use Colibri VF61.</p>
-
-<p><img src="http://docs.toradex.com/103049-aster-carrier-board.jpg" alt="Aster Carrier Board_top" />
-<img src="http://docs.toradex.com/103117-aster-back-view.jpg" alt="Aster Carrier Board_bottom" /></p>
-
+<p><img src="http://docs.toradex.com/103049-aster-carrier-board.jpg" alt="Aster Carrier Board_top">
+<img src="http://docs.toradex.com/103117-aster-back-view.jpg" alt="Aster Carrier Board_bottom"></p>
 <p><a href="http://www.waveshare.com/wiki/Pioneer600">Pioneer600</a></p>
-
-<p><img src="http://www.waveshare.com/w/upload/f/f5/Pioneer600_User_Manual-3.jpg" alt="Poineer600 Rpi Cape Board " /></p>
-
+<p><img src="http://www.waveshare.com/w/upload/f/f5/Pioneer600_User_Manual-3.jpg" alt="Poineer600 Rpi Cape Board "></p>
 <p><a href="https://github.com/bhuvanchandra/images-repo/raw/master/images-aster-pioneer600/aster-pioneer600.jpg">Hardware Setup</a></p>
-
-<p><img src="https://github.com/bhuvanchandra/images-repo/raw/master/images-aster-pioneer600/aster-pioneer600.jpg" alt="Hardware Setup" /></p>
-
+<p><img src="https://github.com/bhuvanchandra/images-repo/raw/master/images-aster-pioneer600/aster-pioneer600.jpg" alt="Hardware Setup"></p>
 <p>Build and install the OE-Core aka Yocto SDK, for instructions related to
 building and installing SDK, have a look at this knowledge base <a href="http://developer.toradex.com/knowledge-base/linux-sdks">article</a>.
 After installing SDK, cross-compile libsoc.</p>
-
 <h6 id="cross-compiling-libsoc">Cross-compiling libsoc:</h6>
-
 <pre><code>$ cd ~/
 $ git clone -b master https://github.com/jackmitch/libsoc.git
 $ cd libsoc
@@ -215,19 +178,13 @@ $ ./configure --host=arm-angstrom-linux-gnueabi --prefix=/usr/local/oecore-x86_6
 ...
 $ make -j3
 $ sudo make install
-</code></pre>
-
-<h6 id="cross-compiling-libsoc-examples">Cross-compiling libsoc examples:</h6>
-
+</code></pre><h6 id="cross-compiling-libsoc-examples">Cross-compiling libsoc examples:</h6>
 <pre><code>$ cd ~/
 $ git clone https://github.com/bhuvanchandra/libsoc-examples.git
 $ cd libsoc-examples
 $ cd ssd1306/
 $ MACHINE=colibri-vf make
-</code></pre>
-
-<p>Copy the binary to target via ssh and run the example.</p>
-
+</code></pre><p>Copy the binary to target via ssh and run the example.</p>
 <p><em>NOTE:</em> One can build <em>libsoc</em> with Open Embedded aka Yocto. Recipe for <a href="https://layers.openembedded.org/layerindex/recipe/20464/">libsoc</a> is
 available with Open Embedded.</p>
 

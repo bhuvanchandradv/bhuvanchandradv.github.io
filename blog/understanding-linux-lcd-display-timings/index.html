@@ -40,7 +40,7 @@
 
 
     
-    <link rel="stylesheet" href="/css/dark-style.css?t=1500449938">
+    <link rel="stylesheet" href="/css/dark-style.css?t=1710775205">
     
 
 
@@ -147,14 +147,9 @@
     </div>
 
     <div class="container markdown  fade-in two  top-pad">
-        
-
-<h3 id="mapping-lcd-tft-display-timings-to-linux-kernel-data-structures">Mapping LCD/TFT display timings to Linux Kernel data structures</h3>
-
-<hr />
-
+        <h3 id="mapping-lcdtft-display-timings-to-linux-kernel-data-structures">Mapping LCD/TFT display timings to Linux Kernel data structures###</h3>
+<hr>
 <p><em><strong>Most of the LCD/TFT display datasheets provide the following timing information:</strong></em></p>
-
 <ul>
 <li><strong>Horizontal Back Porch(HBP)</strong>: Number of pixel clk pulses between HSYNC signal and the first valid pixel data.</li>
 <li><strong>Horizontal Front porch(HFP)</strong>: Number of pixel clk pulses between the last valid pixel data in the line and the next hsync pulse.</li>
@@ -171,51 +166,36 @@ Screen Height = Active frame height + VBP + VFP</li>
 <li><strong>VSYNC polarity</strong>: Value of VSYNC to indicate the start of a new frame (active LOW or HIGH)</li>
 <li><strong>HSYNC polarity</strong>: Value of HSYNC to indicate the start of a new line (active LOW or HIGH).</li>
 </ul>
-
 <p><em><strong>In some datasheets they may provide horizontal and vertical blanking period:</strong></em></p>
-
 <pre><code>Horizontal Blanking Period: HSYNC + HFP + HBP
 Vertical Blanking Period: VSYNC + VFP + VBP
-</code></pre>
-
-<p>e.g.
+</code></pre><p>e.g.
 If Vertical blanking period was given with a typical value of 150, one can choose:</p>
-
 <pre><code>VSYNC:90
 VFP:45
 VBP:45
-</code></pre>
-
-<p>All the LCD/TFT display related timings information values obtained from display datasheet need to be passed/mapped to the respective driver in the kernel which is responsible for display.</p>
-
+</code></pre><p>All the LCD/TFT display related timings information values obtained from display datasheet need to be passed/mapped to the respective driver in the kernel which is responsible for display.</p>
 <p><em><strong>Adding timings to kernel data structure:</strong></em></p>
-
-<p>If using <em>modedb</em> for video modes one need to map the _fb<em>videomode</em> data structure with appropriate LCD timing values obtained from datasheet.</p>
-
-<pre><code class="language-c">struct fb_videomode {
-	const char *name;   // Descriptive name
-	u32 refresh;        // Refresh rate in Hz
-	u32 xres;           // resolution in x
-	u32 yres;           // resolution in y
-	u32 pixclock;       // Pixel clock in picoseconds
-	u32 left_margin;    // Horizontal Back Porch
-	u32 right_margin;   // Horizontal Front Porch
-	u32 upper_margin;   // Vertical Back Porch
-	u32 lower_margin;   // Vertical Front Porch
-	u32 hsync_len;      // Hsync pulse width
-	u32 vsync_len;      // Vsync pulse width
-	u32 sync;           // Polarity on the Data Enable
-	u32 vmode;          // Video Mode
-	u32 flag;           // Usually 0
-};
-</code></pre>
-
-<p>The naming convention in data structure and the data sheet timing values are slightly different.</p>
-
+<p>If using <em>modedb</em> for video modes one need to map the <em>fb_videomode</em> data structure with appropriate LCD timing values obtained from datasheet.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">struct</span> fb_videomode {
+	<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>name;   <span style="color:#75715e">// Descriptive name
+</span><span style="color:#75715e"></span>	u32 refresh;        <span style="color:#75715e">// Refresh rate in Hz
+</span><span style="color:#75715e"></span>	u32 xres;           <span style="color:#75715e">// resolution in x
+</span><span style="color:#75715e"></span>	u32 yres;           <span style="color:#75715e">// resolution in y
+</span><span style="color:#75715e"></span>	u32 pixclock;       <span style="color:#75715e">// Pixel clock in picoseconds
+</span><span style="color:#75715e"></span>	u32 left_margin;    <span style="color:#75715e">// Horizontal Back Porch
+</span><span style="color:#75715e"></span>	u32 right_margin;   <span style="color:#75715e">// Horizontal Front Porch
+</span><span style="color:#75715e"></span>	u32 upper_margin;   <span style="color:#75715e">// Vertical Back Porch
+</span><span style="color:#75715e"></span>	u32 lower_margin;   <span style="color:#75715e">// Vertical Front Porch
+</span><span style="color:#75715e"></span>	u32 hsync_len;      <span style="color:#75715e">// Hsync pulse width
+</span><span style="color:#75715e"></span>	u32 vsync_len;      <span style="color:#75715e">// Vsync pulse width
+</span><span style="color:#75715e"></span>	u32 sync;           <span style="color:#75715e">// Polarity on the Data Enable
+</span><span style="color:#75715e"></span>	u32 vmode;          <span style="color:#75715e">// Video Mode
+</span><span style="color:#75715e"></span>	u32 flag;           <span style="color:#75715e">// Usually 0
+</span><span style="color:#75715e"></span>};
+</code></pre></div><p>The naming convention in data structure and the data sheet timing values are slightly different.</p>
 <p><em>The following picture can be used as reference while converting:</em></p>
-
-<p><img src="https://github.com/bhuvanchandra/images-repo/raw/master/images-linux-display-timings/101353-linux_lcd_timing.jpg" alt="lcd-timings" /></p>
-
+<p><img src="https://github.com/bhuvanchandra/images-repo/raw/master/images-linux-display-timings/101353-linux_lcd_timing.jpg" alt="lcd-timings"></p>
 <ul>
 <li><strong>xres</strong>: Number of horizontal pixels, resolution in the x axis.</li>
 <li><strong>yres</strong>: Number of vertical lines or pixels, resolution in the y axis.</li>

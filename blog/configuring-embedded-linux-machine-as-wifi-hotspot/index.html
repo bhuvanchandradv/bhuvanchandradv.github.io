@@ -40,7 +40,7 @@
 
 
     
-    <link rel="stylesheet" href="/css/dark-style.css?t=1500449938">
+    <link rel="stylesheet" href="/css/dark-style.css?t=1710775205">
     
 
 
@@ -147,22 +147,15 @@
     </div>
 
     <div class="container markdown  fade-in two  top-pad">
-        
-
-<h2 id="b-configuring-embedded-linux-machine-as-wifi-hotspot-b"><B>Configuring Embedded Linux machine as WiFi Hotspot<B></h2>
-
-<h3 id="b-test-setup-b"><B>Test Setup:<B></h3>
-
+        <h2 id="bconfiguring-embedded-linux-machine-as-wifi-hotspotb"><!-- raw HTML omitted -->Configuring Embedded Linux machine as WiFi Hotspot<!-- raw HTML omitted --></h2>
+<h3 id="btest-setupb"><!-- raw HTML omitted -->Test Setup:<!-- raw HTML omitted --></h3>
 <ul>
 <li><a href="http://developer.toradex.com/products/colibri-vf61">Colibri VF61 V1.1A</a></li>
 <li><a href="http://developer.toradex.com/products/colibri-som-family/carrier-boards">Colibri Evaluation Board V3.1a/Iris V1.1</a></li>
 <li><a href="http://developer.toradex.com/products/wl250n-usb-wifi">Ambicom WL250N-USB Wireless 802.11b/g/n (V1.0a)</a></li>
 </ul>
-
-<p><img src="https://raw.githubusercontent.com/bhuvanchandra/images-repo/master/images-ap/evalBoard_3.1a_test_setup.jpg" alt="Hardware setup" /></p>
-
+<p><img src="https://raw.githubusercontent.com/bhuvanchandra/images-repo/master/images-ap/evalBoard_3.1a_test_setup.jpg" alt="Hardware setup"></p>
 <h5 id="during-boot-or-upon-insertion-the-following-kernel-messages-identify-ambicom-wl250n-usb-stick">During boot or upon insertion the following kernel messages identify Ambicom WL250N-USB stick:</h5>
-
 <pre><code>[   10.153746] usb 1-1.1: new high speed USB device number 3 using fsl-ehci
 [   10.299135] usb 1-1.1: New USB device found, idVendor=148f, idProduct=3070
 [   10.309882] usb 1-1.1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
@@ -172,25 +165,17 @@
 [   10.384713] Registered led device: rt2800usb-phy0::radio
 [   10.384904] Registered led device: rt2800usb-phy0::assoc
 [   10.385062] Registered led device: rt2800usb-phy0::quality
-</code></pre>
-
-<h5 id="in-user-space-it-can-be-identified-by-lsusb-as-follows">In user space it can be identified by <em>lsusb</em> as follows:</h5>
-
+</code></pre><h5 id="in-user-space-it-can-be-identified-by-_lsusb_-as-follows">In user space it can be identified by <em>lsusb</em> as follows:</h5>
 <pre><code>root@colibri-vf:~# lsusb
 …..
 Bus 001 Device 003: ID 148f:3070 Ralink Technology, Corp. RT2870/RT3070 Wireless Adapter
 …..
-</code></pre>
-
-<h5 id="ethernet-network">Ethernet/Network:</h5>
-
+</code></pre><h5 id="ethernetnetwork">Ethernet/Network:</h5>
 <pre><code>[   20.491401] eth0: Freescale FEC PHY driver [Micrel KS8041] (mii_bus:phy_addr=2:01, irq=-1)
 [   20.517857] ADDRCONF(NETDEV_UP): eth0: link is not ready
 [   22.500404] ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
 [    7.721280] eth0: no IPv6 routers present
-</code></pre>
-
-<pre><code>root@colibri-vf:~# ifconfig eth0
+</code></pre><pre><code>root@colibri-vf:~# ifconfig eth0
 eth0      Link encap:Ethernet  HWaddr 00:14:2D:49:3D:8D  
           inet addr:10.18.0.116  Bcast:10.18.3.255  Mask:255.255.252.0
           inet6 addr: fe80::214:2dff:fe49:3d8d/64 Scope:Link
@@ -199,9 +184,7 @@ eth0      Link encap:Ethernet  HWaddr 00:14:2D:49:3D:8D
           TX packets:2186 errors:0 dropped:0 overruns:0 carrier:0
           collisions:0 txqueuelen:1000
           RX bytes:3677223 (3.5 MiB)  TX bytes:580461 (566.8 KiB)
-</code></pre>
-
-<pre><code>root@colibri-vf:~# connmanctl services
+</code></pre><pre><code>root@colibri-vf:~# connmanctl services
 *AO Wired                { ethernet_00142d493d8d_cable }
 root@colibri-vf:~# connmanctl services ethernet_00142d493d8d_cable                                                                                                                                           
 [ ethernet_00142d493d8d_cable ]
@@ -228,21 +211,15 @@ root@colibri-vf:~# connmanctl services ethernet_00142d493d8d_cable
   Proxy = { Method=direct }
   Proxy.Configuration = { }
   Provider = { }
-</code></pre>
-
-<h5 id="b-to-configure-a-hotspot-requires-several-steps-b"><B>To configure a hotspot requires several steps:<B></h5>
-
+</code></pre><h5 id="bto-configure-a-hotspot-requires-several-stepsb"><!-- raw HTML omitted -->To configure a hotspot requires several steps:<!-- raw HTML omitted --></h5>
 <ul>
 <li>Configure the wireless adapter with IP address</li>
 <li>Configure UDHCP server</li>
 <li>Install and configure hostap-daemon  the user space daemon for IEEE 802.11 management</li>
 <li>Configure IP routing between wlan and ethernet</li>
 </ul>
-
-<h5 id="b-configure-the-wireless-adapter-with-ip-address-b"><B>Configure the wireless adapter with IP address:<B></h5>
-
+<h5 id="bconfigure-the-wireless-adapter-with-ip-addressb"><!-- raw HTML omitted -->Configure the wireless adapter with IP address:<!-- raw HTML omitted --></h5>
 <p>Setting static IP for wlan0 manually :</p>
-
 <pre><code>root@colibri-vf:~#ifconfig wlan0 192.168.0.1 up
 root@colibri-vf:~# ifconfig wlan0
 wlan0     Link encap:Ethernet  HWaddr 00:10:7A:4F:73:B4  
@@ -253,14 +230,10 @@ wlan0     Link encap:Ethernet  HWaddr 00:10:7A:4F:73:B4
           TX packets:441 errors:0 dropped:0 overruns:0 carrier:0
           collisions:0 txqueuelen:1000
           RX bytes:97112 (94.8 KiB)  TX bytes:138516 (135.2 KiB)
-</code></pre>
-
-<h5 id="b-configure-udhcp-server-b"><B>Configure UDHCP server:<B></h5>
-
+</code></pre><h5 id="bconfigure-udhcp-serverb"><!-- raw HTML omitted -->Configure UDHCP server:<!-- raw HTML omitted --></h5>
 <p>Create a configuration file for udhcp server
 Sample UDHCP server configuration file:
 /etc/udhcpd.conf</p>
-
 <pre><code># The start and end of the DHCP lease block
 start           192.168.0.20
 end             192.168.0.254
@@ -305,29 +278,16 @@ opt     lease   864000
 # Optionally specify static lease(s)
 #static_lease   00:51:AF:05:B0:05 192.168.0.100
 #static_lease   00:51:AF:00:E1:02 192.168.0.110
-</code></pre>
-
-<h5 id="b-install-and-configure-hostapd-the-user-space-daemon-b"><B>Install and configure hostapd  the user space daemon:<B></h5>
-
+</code></pre><h5 id="binstall-and-configure-hostapd--the-user-space-daemonb"><!-- raw HTML omitted -->Install and configure hostapd  the user space daemon:<!-- raw HTML omitted --></h5>
 <p><a href="http://layers.openembedded.org/layerindex/recipe/7367/">hostapd</a> recipe was available in open embedded, one can easily build it using OE build.</p>
-
 <p>Please refer the below knowledge base <a href="http://developer.toradex.com/software-resources/arm-family/linux/board-support-package/openembedded-(core)">article</a> for setting up oe-core:</p>
-
 <p>Once hostap-daemon was build, copy the respective .ipk package and dependencies to target (Colibri VF61) and install the ipk packages.</p>
-
 <p>Installing ipk packages:</p>
-
 <pre><code>root@colibri-vf:~#opkg install hostap-daemon_1.0-r0_armv7ahf-vfp-neon.ipk
-</code></pre>
-
-<p>After installing hostapd, a sample configuration file hostapd.conf will be available at /etc/hostapd.conf and a script file hostapd was populated in /etc/init.d/  for auto starting at boot time.</p>
-
+</code></pre><p>After installing hostapd, a sample configuration file hostapd.conf will be available at /etc/hostapd.conf and a script file hostapd was populated in /etc/init.d/  for auto starting at boot time.</p>
 <p>One can use/edit the configuration available by default or use a custom configuration.</p>
-
-<h5 id="b-sample-custom-hostapd-configuration-file-b"><B>Sample custom hostapd configuration file:<B></h5>
-
+<h5 id="bsample-custom-hostapd-configuration-fileb"><!-- raw HTML omitted -->Sample custom hostapd configuration file:<!-- raw HTML omitted --></h5>
 <p>/etc/hostapd.conf</p>
-
 <pre><code># Interface used by Access Point
 interface=wlan0
 
@@ -364,41 +324,23 @@ wpa=2
 # Set ciphers
 wpa_pairwise=TKIP
 rsn_pairwise=CCMP
-</code></pre>
-
-<p>Configure IP routing between the wlan and ethernet:
+</code></pre><p>Configure IP routing between the wlan and ethernet:
 For the first time we need to do the following steps for enabling ip forwarding.</p>
-
-<h5 id="b-enabling-ip-forwarding-b"><B>Enabling IP forwarding:<B></h5>
-
+<h5 id="benabling-ip-forwardingb"><!-- raw HTML omitted -->Enabling IP forwarding:<!-- raw HTML omitted --></h5>
 <pre><code>Uncomment the “#net.ipv4.ip_forward=1” line in /etc/sysctl.conf
-</code></pre>
-
-<pre><code>root@colibri-vf:~#sysctl -w net.ipv4.ip_forward=1
+</code></pre><pre><code>root@colibri-vf:~#sysctl -w net.ipv4.ip_forward=1
 	 or
 root@colibri-vf:~#echo 1 &gt; /proc/sys/net/ipv4/ip_forward
-</code></pre>
-
-<h5 id="b-create-new-iptables-rule-b"><B>Create new iptables Rule:<B></h5>
-
+</code></pre><h5 id="bcreate-new-iptables-ruleb"><!-- raw HTML omitted -->Create new iptables Rule:<!-- raw HTML omitted --></h5>
 <pre><code>root@colibri-vf:~#iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 root@colibri-vf:~#iptables -A FORWARD -i wlan0 -o eth0 -j ACCEPT
-</code></pre>
-
-<h5 id="b-saving-iptables-b"><B>Saving iptables:<B></h5>
-
+</code></pre><h5 id="bsaving-iptablesb"><!-- raw HTML omitted -->Saving iptables:<!-- raw HTML omitted --></h5>
 <p>Save the iptables for future reuse.</p>
-
 <pre><code>root@colibri-vf:~#iptables-save &gt; /etc/iptables.ipv4.nat
-</code></pre>
-
-<p>For configuring the wlan0 at start one can use systemd service files to do the initial configuration for setting the static ip for wlan0 and starting hostapd, udhcp daemons and restoring the iptable for IP forwarding.</p>
-
-<h5 id="b-systemd-service-file-for-initializing-wlan0-and-starting-hostap-daemon-and-udhcp-daemon-b"><B>Systemd service file for initializing wlan0 and starting hostap-daemon and udhcp-daemon:<B></h5>
-
+</code></pre><p>For configuring the wlan0 at start one can use systemd service files to do the initial configuration for setting the static ip for wlan0 and starting hostapd, udhcp daemons and restoring the iptable for IP forwarding.</p>
+<h5 id="bsystemd-service-file-for-initializing-wlan0-and-starting-hostap-daemon-and-udhcp-daemonb"><!-- raw HTML omitted -->Systemd service file for initializing wlan0 and starting hostap-daemon and udhcp-daemon:<!-- raw HTML omitted --></h5>
 <p>Create a new systemd service file:
 /etc/systemd/system/access-point.service</p>
-
 <pre><code>[Unit]
 Description=Access Point
 Wants=network.target
@@ -419,20 +361,12 @@ ExecStop=/sbin/ip link set dev wlan0 down
 
 [Install]
 WantedBy=multi-user.target
-</code></pre>
-
-<h5 id="b-enabling-access-point-service-b"><B>Enabling access-point.service:<B></h5>
-
+</code></pre><h5 id="benabling-access-pointserviceb"><!-- raw HTML omitted -->Enabling access-point.service:<!-- raw HTML omitted --></h5>
 <pre><code>root@colibri-vf:~#systemctl enable access-point.service
-</code></pre>
-
-<h6 id="note-there-is-no-need-of-the-script-file-hostapd-in-etc-init-d-as-we-are-taking-care-of-loading-it-at-boot-time-using-systemd-service-file-one-can-remove-the-file-root-colibri-vf-rm-etc-init-d-hostapd">NOTE: There is no need of the script file hostapd in /etc/init.d as we are taking care of loading it at boot time using systemd service file one can remove the file. ( root@colibri-vf:~#rm /etc/init.d/hostapd )</h6>
-
-<h5 id="b-systemd-service-file-for-restoring-iptables-b"><B>Systemd service file for restoring iptables:<B></h5>
-
+</code></pre><h6 id="note-there-is-no-need-of-the-script-file-hostapd-in-etcinitd-as-we-are-taking-care-of-loading-it-at-boot-time-using-systemd-service-file-one-can-remove-the-file--rootcolibri-vfrm-etcinitdhostapd-">NOTE: There is no need of the script file hostapd in /etc/init.d as we are taking care of loading it at boot time using systemd service file one can remove the file. ( root@colibri-vf:~#rm /etc/init.d/hostapd )</h6>
+<h5 id="bsystemd-service-file-for-restoring-iptablesb"><!-- raw HTML omitted -->Systemd service file for restoring iptables:<!-- raw HTML omitted --></h5>
 <p>Create a new systemd service file:
 /etc/systemd/system/iptables-restore.service</p>
-
 <pre><code>[Unit]
 Description=iptables
 DefaultDependencies=false
@@ -444,17 +378,10 @@ ExecStart=/usr/sbin/iptables-restore /etc/iptables.ipv4.nat
 
 [Install]
 WantedBy=access-point.service
-</code></pre>
-
-<h5 id="b-enabling-iptables-restore-service-b"><B>Enabling iptables-restore.service:<B></h5>
-
+</code></pre><h5 id="benabling-iptables-restoreserviceb"><!-- raw HTML omitted -->Enabling iptables-restore.service:<!-- raw HTML omitted --></h5>
 <pre><code>root@colibri-vf:~#systemctl enable iptables-restore.service
-</code></pre>
-
-<h5 id="b-sample-iptables-ip4-nat-with-ip-forwarding-b"><B>Sample iptables.ip4.nat with ip forwarding:<B></h5>
-
+</code></pre><h5 id="bsample-iptablesip4nat-with-ip-forwardingb"><!-- raw HTML omitted -->Sample iptables.ip4.nat with ip forwarding:<!-- raw HTML omitted --></h5>
 <p>/etc/iptables.ipv4.nat</p>
-
 <pre><code># Generated by iptables-save v1.4.17 on  Thu Jun 05 12:10:23 2014
 *nat
 :PREROUTING ACCEPT [19:2729]
@@ -481,12 +408,8 @@ COMMIT
 -A FORWARD -i wlan0 -o eth0 -j ACCEPT
 COMMIT
 # Completed on  Thu Jun 05 12:10:23 2014
-</code></pre>
-
-<p>Once everything was configured restart the module, and check whether all the services are up and running successfully.</p>
-
-<h5 id="b-checking-the-systemd-services-b"><B>Checking the systemd services:<B></h5>
-
+</code></pre><p>Once everything was configured restart the module, and check whether all the services are up and running successfully.</p>
+<h5 id="bchecking-the-systemd-servicesb"><!-- raw HTML omitted -->Checking the systemd services:<!-- raw HTML omitted --></h5>
 <pre><code>root@colibri-vf:~# systemctl status access-point.service  
 access-point.service - Access Point
           Loaded: loaded (/etc/systemd/system/ap.service; enabled)
@@ -500,22 +423,15 @@ access-point.service - Access Point
                   |-318 /usr/sbin/wpa_supplicant -B -iwlan0 -c /etc/wpa_suppl...
                   |-328 /usr/sbin/hostapd -B /etc/hostapd.conf
                   `-329 /usr/sbin/udhcpd -fS /etc/udhcpd.conf
-</code></pre>
-
-<pre><code>root@colibri-vf:~# systemctl status iptables-restore.service
+</code></pre><pre><code>root@colibri-vf:~# systemctl status iptables-restore.service
 iptables-restore.service - iptables
           Loaded: loaded (/etc/systemd/system/iptables-restore.service; enabled)
           Active: active (exited) since Mon 2001-01-01 09:11:12 UTC; 13 years 2 months ago
          Process: 67 ExecStart=/usr/sbin/iptables-restore /etc/iptables.ipv4.nat (code=exited, status=0/SUCCESS)
-</code></pre>
-
-<pre><code>root@colibri-vf:~# ps aux | grep -E 'hostapd|udhcpd'
+</code></pre><pre><code>root@colibri-vf:~# ps aux | grep -E 'hostapd|udhcpd'
 root       328  0.1  0.4   4752  1056 ?        Ss   22:01   0:01 /usr/sbin/hostapd -B /etc/hostapd.conf
 root       329  0.0  0.2   2152   684 ?        Ss   22:01   0:00 /usr/sbin/udhcpd -fS /etc/udhcpd.conf
-</code></pre>
-
-<h5 id="b-check-the-ethernet-interface-b"><B>Check the ethernet interface:<B></h5>
-
+</code></pre><h5 id="bcheck-the-ethernet-interfaceb"><!-- raw HTML omitted -->Check the ethernet interface:<!-- raw HTML omitted --></h5>
 <pre><code>root@colibri-vf:~# ifconfig
 eth0      Link encap:Ethernet  HWaddr 00:14:2D:49:3D:8D  
           inet addr:10.18.0.116  Bcast:10.18.3.255  Mask:255.255.252.0
@@ -553,15 +469,10 @@ wlan0     Link encap:Ethernet  HWaddr 00:10:7A:4F:73:B4
           TX packets:1011 errors:0 dropped:0 overruns:0 carrier:0
           collisions:0 txqueuelen:1000
           RX bytes:444925 (434.4 KiB)  TX bytes:304509 (297.3 KiB)
-</code></pre>
-
-<p>Now we can able to see the access point SSID on other wifi devices. One can connect to the access point with the appropriate pass key and able to browse the internet.</p>
-
-<p><img src="https://github.com/bhuvanchandra/images-repo/raw/master/images-ap/ap_screenshot_1.png" width="640" height="480"></p>
-
-<p><img src="https://github.com/bhuvanchandra/images-repo/raw/master/images-ap/ap_screenshot_2.png" width="640" height="480"></p>
-
-<p><img src="https://github.com/bhuvanchandra/images-repo/raw/master/images-ap/ap_screenshot_3.png" width="640" height="480"></p>
+</code></pre><p>Now we can able to see the access point SSID on other wifi devices. One can connect to the access point with the appropriate pass key and able to browse the internet.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 
     </div>
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Introduction</title>
@@ -6,7 +6,7 @@
     <description>Recent content on Introduction</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 19 Jul 2017 08:15:33 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 09 Mar 2017 13:23:28 +0800</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
@@ -19,9 +19,10 @@
       <guid>/blog/micropython-running-on-nxp-vf6xx_m4-core/</guid>
       <description>MicroPython running on NXP VF6XX M4 Core This is an experimental port of MicroPython for NXP VF6XX M4 Core.
 Source code
-Supported features include: - REPL (Python prompt) over UART2. - Garbage collector. - GPIO, UART support.
-Build instructions The tool chain required for the build is the Linaro provided ARM Embedded toolchain, e.g. 4.9 2015 Q3 update. Unpack the toolchain to an appropriate location.
-e.g. your home directory:</description>
+Supported features include:
+ REPL (Python prompt) over UART2. Garbage collector. GPIO, UART support.  Build instructions The tool chain required for the build is the Linaro provided ARM Embedded toolchain, e.g. 4.9 2015 Q3 update. Unpack the toolchain to an appropriate location.
+e.g. your home directory:
+$ tar xjf ${HOME}/gcc-arm-none-eabi-4_9-2015q3-20150921-linux.</description>
     </item>
     
     <item>
@@ -30,8 +31,9 @@ e.g. your home directory:</description>
       <pubDate>Thu, 18 May 2017 11:55:50 +0800</pubDate>
       
       <guid>/blog/libsoc-examples/</guid>
-      <description>Cross-compiling libsoc: Cross-compiling libsoc examples:        Colibri VF61
-The Colibri VF50 and VF61 are both SODIMM sized computer modules based on the Qualcomm/NXP/Freescale Vybrid embedded System-on-Chip (SoC). The Vybrid SoC features a Cortex-A5 processor supporting a clock frequency of up to 500MHz. The Colibri VF61 additionally features a second Cortex-M4 processor core which can be clocked at up 167MHz maximum.</description>
+      <description>Colibri VF61
+The Colibri VF50 and VF61 are both SODIMM sized computer modules based on the Qualcomm/NXP/Freescale Vybrid embedded System-on-Chip (SoC). The Vybrid SoC features a Cortex-A5 processor supporting a clock frequency of up to 500MHz. The Colibri VF61 additionally features a second Cortex-M4 processor core which can be clocked at up 167MHz maximum.
+This unique heterogeneous dual core system allows for running a second hard real time operating system on the M4 core for time and security critical tasks.</description>
     </item>
     
     <item>
@@ -49,8 +51,8 @@ The Colibri VF50 and VF61 are both SODIMM sized computer modules based on the Qu
       <pubDate>Thu, 09 Mar 2017 13:19:25 +0800</pubDate>
       
       <guid>/about/</guid>
-      <description>I’m interested in electronics, robotics, physics, bicycle trekking, music, drawing and pet-keeping. I was also a member in Scout during my school days, we as a troop did volunteer work during our school events. I have always been good at sports. I like playing volley ball, basket ball and running. I have played in few sports tournaments (volleyball, races) together with my team.
-Computers first appered in my life when I was seven, we used M$-DOS Logo programming language.</description>
+      <description>I have a multifaceted interest in electronics, robotics, physics, bicycle trekking, music, drawing, and pet-keeping. In my school days, I was an active member of the Scouts, where our troop engaged in volunteer work during school events. My penchant for sports has always been evident, with a particular fondness for volleyball, basketball, and running, even participating in numerous sports tournaments with my team.
+Computers entered my life at the age of seven, initially navigating through the M$-DOS Logo programming language.</description>
     </item>
     
     <item>
@@ -68,17 +70,17 @@ Computers first appered in my life when I was seven, we used M$-DOS Logo program
       <pubDate>Tue, 02 Feb 2016 11:55:43 +0800</pubDate>
       
       <guid>/blog/understanding-linux-lcd-display-timings/</guid>
-      <description>Mapping LCD/TFT display timings to Linux Kernel data structures Most of the LCD/TFT display datasheets provide the following timing information:
+      <description>Mapping LCD/TFT display timings to Linux Kernel data structures###  Most of the LCD/TFT display datasheets provide the following timing information:
  Horizontal Back Porch(HBP): Number of pixel clk pulses between HSYNC signal and the first valid pixel data. Horizontal Front porch(HFP): Number of pixel clk pulses between the last valid pixel data in the line and the next hsync pulse. Vertical back porch(VBP): Number of lines (HSYNC pulses) from a VSYNC signal to the first valid line.</description>
     </item>
     
     <item>
       <title>Point of Sale example application with GTK&#43; and Glade</title>
-      <link>/blog/point-of-sale-example-application-with-gtk--and-glade/</link>
+      <link>/blog/point-of-sale-example-application-with-gtk-and-glade/</link>
       <pubDate>Tue, 02 Feb 2016 11:55:32 +0800</pubDate>
       
-      <guid>/blog/point-of-sale-example-application-with-gtk--and-glade/</guid>
-      <description> POS Demo Point of sale demo applicaiton example with GTK+ and Glade running on Toradex Apalis/Colibri System On Modules.
+      <guid>/blog/point-of-sale-example-application-with-gtk-and-glade/</guid>
+      <description>POS Demo Point of sale demo applicaiton example with GTK+ and Glade running on Toradex Apalis/Colibri System On Modules.
 Source Code available at: pos-demo </description>
     </item>
     
