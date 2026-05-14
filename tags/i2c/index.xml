@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>I2c on Bhuvan Chandra DV</title>
     <link>https://bhuvanchandradv.github.io/tags/i2c/</link>
     <description>Recent content in I2c on Bhuvan Chandra DV</description>
     <generator>Hugo</generator>
-    <language>en-us</language>
+    <language>en</language>
     <lastBuildDate>Thu, 18 May 2017 11:55:50 +0800</lastBuildDate>
     <atom:link href="https://bhuvanchandradv.github.io/tags/i2c/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,29 +13,7 @@
       <link>https://bhuvanchandradv.github.io/blog/libsoc-examples/</link>
       <pubDate>Thu, 18 May 2017 11:55:50 +0800</pubDate>
       <guid>https://bhuvanchandradv.github.io/blog/libsoc-examples/</guid>
-      <description>&lt;p&gt;Examples using &lt;a href=&#34;https://github.com/jackmitch/libsoc&#34;&gt;libsoc&lt;/a&gt; on a Colibri VF61 module with an Aster carrier board and Pioneer600 Raspberry Pi expansion cape.&lt;/p&gt;
-&lt;h2 id=&#34;hardware&#34;&gt;Hardware&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.toradex.com/computer-on-modules/colibri-arm-family/nxp-freescale-vybrid-vf6xx&#34;&gt;Colibri VF61&lt;/a&gt; — Cortex-A5 + Cortex-M4, SODIMM form factor&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.toradex.com/products/carrier-boards/aster-carrier-board&#34;&gt;Aster Carrier Board&lt;/a&gt; — Arduino Uno and Raspberry Pi headers&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.waveshare.com/wiki/Pioneer600&#34;&gt;Pioneer600&lt;/a&gt; — RPi expansion cape&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img alt=&#34;Hardware Setup&#34; loading=&#34;lazy&#34; src=&#34;https://github.com/bhuvanchandra/images-repo/raw/master/images-aster-pioneer600/aster-pioneer600.jpg&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;cross-compiling-libsoc&#34;&gt;Cross-compiling libsoc&lt;/h2&gt;
-&lt;p&gt;Build and install the Yocto SDK first, then:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git clone -b master https://github.com/jackmitch/libsoc.git
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd libsoc
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;. /usr/local/oecore-x86_64/environment-setup-armv7at2hf-neon-angstrom-linux-gnueabi
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;autoreconf -i
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;./configure --host&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;arm-angstrom-linux-gnueabi &lt;span style=&#34;color:#ae81ff&#34;&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;    --prefix&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/usr/local/oecore-x86_64/sysroots/armv7at2hf-neon-angstrom-linux-gnueabi/
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;make -j&lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;nproc&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo make install
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;cross-compiling-the-examples&#34;&gt;Cross-compiling the examples&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git clone https://github.com/bhuvanchandra/libsoc-examples.git
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd libsoc-examples/ssd1306/
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;MACHINE&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;colibri-vf make
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Copy the binary to the target via SSH and run.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Examples using &lt;a href=&#34;https://github.com/jackmitch/libsoc&#34;&gt;libsoc&lt;/a&gt; on a Colibri VF61 module with an Aster carrier board and Pioneer600 Raspberry Pi expansion cape.&lt;/p&gt;&#xA;&lt;h2 id=&#34;hardware&#34;&gt;Hardware&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.toradex.com/computer-on-modules/colibri-arm-family/nxp-freescale-vybrid-vf6xx&#34;&gt;Colibri VF61&lt;/a&gt; — Cortex-A5 + Cortex-M4, SODIMM form factor&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.toradex.com/products/carrier-boards/aster-carrier-board&#34;&gt;Aster Carrier Board&lt;/a&gt; — Arduino Uno and Raspberry Pi headers&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://www.waveshare.com/wiki/Pioneer600&#34;&gt;Pioneer600&lt;/a&gt; — RPi expansion cape&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://github.com/bhuvanchandra/images-repo/raw/master/images-aster-pioneer600/aster-pioneer600.jpg&#34; alt=&#34;Hardware Setup&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;cross-compiling-libsoc&#34;&gt;Cross-compiling libsoc&lt;/h2&gt;&#xA;&lt;p&gt;Build and install the Yocto SDK first, then:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git clone -b master https://github.com/jackmitch/libsoc.git&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd libsoc&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;. /usr/local/oecore-x86_64/environment-setup-armv7at2hf-neon-angstrom-linux-gnueabi&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;autoreconf -i&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;./configure --host&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;arm-angstrom-linux-gnueabi &lt;span style=&#34;color:#ae81ff&#34;&gt;\&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;    --prefix&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/usr/local/oecore-x86_64/sysroots/armv7at2hf-neon-angstrom-linux-gnueabi/&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;make -j&lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;nproc&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo make install&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;cross-compiling-the-examples&#34;&gt;Cross-compiling the examples&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git clone https://github.com/bhuvanchandra/libsoc-examples.git&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd libsoc-examples/ssd1306/&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;MACHINE&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;colibri-vf make&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Copy the binary to the target via SSH and run.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogs on Bhuvan Chandra DV</title>
     <link>https://bhuvanchandradv.github.io/blog/</link>
     <description>Recent content in Blogs on Bhuvan Chandra DV</description>
     <generator>Hugo</generator>
-    <language>en-us</language>
+    <language>en</language>
     <lastBuildDate>Wed, 19 Jul 2017 08:15:33 +0800</lastBuildDate>
     <atom:link href="https://bhuvanchandradv.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,122 +13,42 @@
       <link>https://bhuvanchandradv.github.io/blog/micropython-running-on-vf6xx_m4/</link>
       <pubDate>Wed, 19 Jul 2017 08:15:33 +0800</pubDate>
       <guid>https://bhuvanchandradv.github.io/blog/micropython-running-on-vf6xx_m4/</guid>
-      <description>&lt;p&gt;This is an experimental port of MicroPython for NXP VF6XX M4 Core.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/bhuvanchandra/micropython/tree/vf6xx_m4&#34;&gt;Source code&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Supported features include:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;REPL (Python prompt) over UART2&lt;/li&gt;
-&lt;li&gt;Garbage collector&lt;/li&gt;
-&lt;li&gt;GPIO, UART support&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;build&#34;&gt;Build&lt;/h2&gt;
-&lt;p&gt;The toolchain required is the Linaro ARM Embedded toolchain (e.g. 4.9 2015 Q3):&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;tar xjf &lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;HOME&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;/gcc-arm-none-eabi-4_9-2015q3-20150921-linux.tar.bz2
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;export PATH&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;$PATH:$HOME/gcc-arm-none-eabi-4_9-2015q3/bin/
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then build:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd &lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;HOME&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;/micropython/vf6xx
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;make
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;booting-the-m4-core&#34;&gt;Booting the M4 Core&lt;/h2&gt;
-&lt;p&gt;Two methods are supported:&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;1. From U-Boot using &lt;code&gt;bootaux&lt;/code&gt;:&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Colibri VFxx &lt;span style=&#34;color:#75715e&#34;&gt;# fatload mmc 0:1 ${loadaddr} firmware.elf&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Colibri VFxx &lt;span style=&#34;color:#75715e&#34;&gt;# bootaux ${loadaddr}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;2. From Linux using remoteproc:&lt;/strong&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;This is an experimental port of MicroPython for NXP VF6XX M4 Core.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/bhuvanchandra/micropython/tree/vf6xx_m4&#34;&gt;Source code&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Supported features include:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;REPL (Python prompt) over UART2&lt;/li&gt;&#xA;&lt;li&gt;Garbage collector&lt;/li&gt;&#xA;&lt;li&gt;GPIO, UART support&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;build&#34;&gt;Build&lt;/h2&gt;&#xA;&lt;p&gt;The toolchain required is the Linaro ARM Embedded toolchain (e.g. 4.9 2015 Q3):&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;tar xjf &lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;HOME&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;/gcc-arm-none-eabi-4_9-2015q3-20150921-linux.tar.bz2&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;export PATH&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;$PATH:$HOME/gcc-arm-none-eabi-4_9-2015q3/bin/&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then build:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd &lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;HOME&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;/micropython/vf6xx&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;make&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;booting-the-m4-core&#34;&gt;Booting the M4 Core&lt;/h2&gt;&#xA;&lt;p&gt;Two methods are supported:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;1. From U-Boot using &lt;code&gt;bootaux&lt;/code&gt;:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Colibri VFxx &lt;span style=&#34;color:#75715e&#34;&gt;# fatload mmc 0:1 ${loadaddr} firmware.elf&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Colibri VFxx &lt;span style=&#34;color:#75715e&#34;&gt;# bootaux ${loadaddr}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;2. From Linux using remoteproc:&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>libsoc Examples on Colibri VF61</title>
       <link>https://bhuvanchandradv.github.io/blog/libsoc-examples/</link>
       <pubDate>Thu, 18 May 2017 11:55:50 +0800</pubDate>
       <guid>https://bhuvanchandradv.github.io/blog/libsoc-examples/</guid>
-      <description>&lt;p&gt;Examples using &lt;a href=&#34;https://github.com/jackmitch/libsoc&#34;&gt;libsoc&lt;/a&gt; on a Colibri VF61 module with an Aster carrier board and Pioneer600 Raspberry Pi expansion cape.&lt;/p&gt;
-&lt;h2 id=&#34;hardware&#34;&gt;Hardware&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.toradex.com/computer-on-modules/colibri-arm-family/nxp-freescale-vybrid-vf6xx&#34;&gt;Colibri VF61&lt;/a&gt; — Cortex-A5 + Cortex-M4, SODIMM form factor&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.toradex.com/products/carrier-boards/aster-carrier-board&#34;&gt;Aster Carrier Board&lt;/a&gt; — Arduino Uno and Raspberry Pi headers&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.waveshare.com/wiki/Pioneer600&#34;&gt;Pioneer600&lt;/a&gt; — RPi expansion cape&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img alt=&#34;Hardware Setup&#34; loading=&#34;lazy&#34; src=&#34;https://github.com/bhuvanchandra/images-repo/raw/master/images-aster-pioneer600/aster-pioneer600.jpg&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;cross-compiling-libsoc&#34;&gt;Cross-compiling libsoc&lt;/h2&gt;
-&lt;p&gt;Build and install the Yocto SDK first, then:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git clone -b master https://github.com/jackmitch/libsoc.git
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd libsoc
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;. /usr/local/oecore-x86_64/environment-setup-armv7at2hf-neon-angstrom-linux-gnueabi
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;autoreconf -i
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;./configure --host&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;arm-angstrom-linux-gnueabi &lt;span style=&#34;color:#ae81ff&#34;&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;    --prefix&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/usr/local/oecore-x86_64/sysroots/armv7at2hf-neon-angstrom-linux-gnueabi/
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;make -j&lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;nproc&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo make install
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;cross-compiling-the-examples&#34;&gt;Cross-compiling the examples&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git clone https://github.com/bhuvanchandra/libsoc-examples.git
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd libsoc-examples/ssd1306/
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;MACHINE&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;colibri-vf make
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Copy the binary to the target via SSH and run.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Examples using &lt;a href=&#34;https://github.com/jackmitch/libsoc&#34;&gt;libsoc&lt;/a&gt; on a Colibri VF61 module with an Aster carrier board and Pioneer600 Raspberry Pi expansion cape.&lt;/p&gt;&#xA;&lt;h2 id=&#34;hardware&#34;&gt;Hardware&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.toradex.com/computer-on-modules/colibri-arm-family/nxp-freescale-vybrid-vf6xx&#34;&gt;Colibri VF61&lt;/a&gt; — Cortex-A5 + Cortex-M4, SODIMM form factor&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.toradex.com/products/carrier-boards/aster-carrier-board&#34;&gt;Aster Carrier Board&lt;/a&gt; — Arduino Uno and Raspberry Pi headers&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://www.waveshare.com/wiki/Pioneer600&#34;&gt;Pioneer600&lt;/a&gt; — RPi expansion cape&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://github.com/bhuvanchandra/images-repo/raw/master/images-aster-pioneer600/aster-pioneer600.jpg&#34; alt=&#34;Hardware Setup&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;cross-compiling-libsoc&#34;&gt;Cross-compiling libsoc&lt;/h2&gt;&#xA;&lt;p&gt;Build and install the Yocto SDK first, then:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git clone -b master https://github.com/jackmitch/libsoc.git&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd libsoc&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;. /usr/local/oecore-x86_64/environment-setup-armv7at2hf-neon-angstrom-linux-gnueabi&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;autoreconf -i&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;./configure --host&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;arm-angstrom-linux-gnueabi &lt;span style=&#34;color:#ae81ff&#34;&gt;\&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;    --prefix&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/usr/local/oecore-x86_64/sysroots/armv7at2hf-neon-angstrom-linux-gnueabi/&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;make -j&lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;nproc&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo make install&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;cross-compiling-the-examples&#34;&gt;Cross-compiling the examples&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git clone https://github.com/bhuvanchandra/libsoc-examples.git&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd libsoc-examples/ssd1306/&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;MACHINE&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;colibri-vf make&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Copy the binary to the target via SSH and run.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Knuckles Demo Application — DirectFB Fork</title>
       <link>https://bhuvanchandradv.github.io/blog/directfb-knuckles-example/</link>
       <pubDate>Tue, 02 Feb 2016 11:55:43 +0800</pubDate>
       <guid>https://bhuvanchandradv.github.io/blog/directfb-knuckles-example/</guid>
-      <description>&lt;p&gt;Fork of the DirectFB example Knuckles, used in a Linux quick boot demo on Toradex Colibri modules.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Screenshot&#34; loading=&#34;lazy&#34; src=&#34;https://raw.githubusercontent.com/bhuvanchandra/images-repo/master/images-knuckles/Screenshot-from-2016-02-02-15-33-49.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/bhuvanchandra/knuckles.git&#34;&gt;Source code&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Fork of the DirectFB example Knuckles, used in a Linux quick boot demo on Toradex Colibri modules.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/bhuvanchandra/images-repo/master/images-knuckles/Screenshot-from-2016-02-02-15-33-49.png&#34; alt=&#34;Screenshot&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/bhuvanchandra/knuckles.git&#34;&gt;Source code&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Understanding Linux LCD Display Timings</title>
       <link>https://bhuvanchandradv.github.io/blog/linux-lcd-timings/</link>
       <pubDate>Tue, 02 Feb 2016 11:55:43 +0800</pubDate>
       <guid>https://bhuvanchandradv.github.io/blog/linux-lcd-timings/</guid>
-      <description>&lt;h3 id=&#34;mapping-lcdtft-display-timings-to-linux-kernel-data-structures&#34;&gt;Mapping LCD/TFT display timings to Linux Kernel data structures&lt;/h3&gt;
-&lt;p&gt;Most LCD/TFT display datasheets provide the following timing information:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Horizontal Back Porch (HBP)&lt;/strong&gt;: Number of pixel clk pulses between HSYNC signal and the first valid pixel data.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Horizontal Front Porch (HFP)&lt;/strong&gt;: Number of pixel clk pulses between the last valid pixel data in the line and the next hsync pulse.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Vertical Back Porch (VBP)&lt;/strong&gt;: Number of lines (HSYNC pulses) from a VSYNC signal to the first valid line.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Vertical Front Porch (VFP)&lt;/strong&gt;: Number of lines (HSYNC pulses) between the last valid line of the frame and the next VSYNC pulse.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;VSYNC pulse width&lt;/strong&gt;: Number of HSYNC pulses when a VSYNC signal is active.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;HSYNC pulse width&lt;/strong&gt;: Number of pixel clk pulses when a HSYNC signal is active.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Active frame width&lt;/strong&gt;: Horizontal resolution.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Active frame height&lt;/strong&gt;: Vertical resolution.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Screen width&lt;/strong&gt;: &lt;code&gt;Active frame width + HBP + HFP&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Screen height&lt;/strong&gt;: &lt;code&gt;Active frame height + VBP + VFP&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;VSYNC polarity&lt;/strong&gt;: Value of VSYNC to indicate the start of a new frame (active LOW or HIGH)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;HSYNC polarity&lt;/strong&gt;: Value of HSYNC to indicate the start of a new line (active LOW or HIGH)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Some datasheets provide horizontal and vertical blanking period instead:&lt;/p&gt;</description>
+      <description>&lt;h3 id=&#34;mapping-lcdtft-display-timings-to-linux-kernel-data-structures&#34;&gt;Mapping LCD/TFT display timings to Linux Kernel data structures&lt;/h3&gt;&#xA;&lt;p&gt;Most LCD/TFT display datasheets provide the following timing information:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Horizontal Back Porch (HBP)&lt;/strong&gt;: Number of pixel clk pulses between HSYNC signal and the first valid pixel data.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Horizontal Front Porch (HFP)&lt;/strong&gt;: Number of pixel clk pulses between the last valid pixel data in the line and the next hsync pulse.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Vertical Back Porch (VBP)&lt;/strong&gt;: Number of lines (HSYNC pulses) from a VSYNC signal to the first valid line.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Vertical Front Porch (VFP)&lt;/strong&gt;: Number of lines (HSYNC pulses) between the last valid line of the frame and the next VSYNC pulse.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;VSYNC pulse width&lt;/strong&gt;: Number of HSYNC pulses when a VSYNC signal is active.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;HSYNC pulse width&lt;/strong&gt;: Number of pixel clk pulses when a HSYNC signal is active.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Active frame width&lt;/strong&gt;: Horizontal resolution.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Active frame height&lt;/strong&gt;: Vertical resolution.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Screen width&lt;/strong&gt;: &lt;code&gt;Active frame width + HBP + HFP&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Screen height&lt;/strong&gt;: &lt;code&gt;Active frame height + VBP + VFP&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;VSYNC polarity&lt;/strong&gt;: Value of VSYNC to indicate the start of a new frame (active LOW or HIGH)&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;HSYNC polarity&lt;/strong&gt;: Value of HSYNC to indicate the start of a new line (active LOW or HIGH)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Some datasheets provide horizontal and vertical blanking period instead:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Point of Sale Demo with GTK&#43; and Glade</title>
       <link>https://bhuvanchandradv.github.io/blog/gtk-example_pos/</link>
       <pubDate>Tue, 02 Feb 2016 11:55:32 +0800</pubDate>
       <guid>https://bhuvanchandradv.github.io/blog/gtk-example_pos/</guid>
-      <description>&lt;p&gt;Point of sale demo application built with GTK+ and Glade, running on Toradex Apalis/Colibri System on Modules.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Screenshot&#34; loading=&#34;lazy&#34; src=&#34;https://github.com/bhuvanchandra/images-repo/raw/master/images-pos/2016-02-02-094708_800x480_scrot.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/bhuvanchandra/pos-demo.git&#34;&gt;Source code&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Point of sale demo application built with GTK+ and Glade, running on Toradex Apalis/Colibri System on Modules.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://github.com/bhuvanchandra/images-repo/raw/master/images-pos/2016-02-02-094708_800x480_scrot.png&#34; alt=&#34;Screenshot&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/bhuvanchandra/pos-demo.git&#34;&gt;Source code&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Configuring an Embedded Linux Machine as a WiFi Hotspot</title>
       <link>https://bhuvanchandradv.github.io/blog/wifi-hotspot-in-linux/</link>
       <pubDate>Fri, 13 Jun 2014 11:55:43 +0800</pubDate>
       <guid>https://bhuvanchandradv.github.io/blog/wifi-hotspot-in-linux/</guid>
-      <description>&lt;p&gt;How to configure an embedded Linux board (Colibri VF61) as a WiFi access point using &lt;code&gt;hostapd&lt;/code&gt;, &lt;code&gt;udhcpd&lt;/code&gt;, and &lt;code&gt;iptables&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;test-setup&#34;&gt;Test Setup&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Colibri VF61 V1.1A&lt;/li&gt;
-&lt;li&gt;Colibri Evaluation Board V3.1a / Iris V1.1&lt;/li&gt;
-&lt;li&gt;Ambicom WL250N-USB (Ralink RT3070 chipset)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;steps-overview&#34;&gt;Steps Overview&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;Assign a static IP to &lt;code&gt;wlan0&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Configure &lt;code&gt;udhcpd&lt;/code&gt; as the DHCP server&lt;/li&gt;
-&lt;li&gt;Configure &lt;code&gt;hostapd&lt;/code&gt; as the AP daemon&lt;/li&gt;
-&lt;li&gt;Enable IP forwarding and NAT between &lt;code&gt;wlan0&lt;/code&gt; and &lt;code&gt;eth0&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Wire it all up with systemd service files&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;1-static-ip-for-wlan0&#34;&gt;1. Static IP for wlan0&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ifconfig wlan0 192.168.0.1 up
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;2-udhcpd-configuration&#34;&gt;2. udhcpd configuration&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;/etc/udhcpd.conf&lt;/code&gt;:&lt;/p&gt;</description>
+      <description>&lt;p&gt;How to configure an embedded Linux board (Colibri VF61) as a WiFi access point using &lt;code&gt;hostapd&lt;/code&gt;, &lt;code&gt;udhcpd&lt;/code&gt;, and &lt;code&gt;iptables&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;test-setup&#34;&gt;Test Setup&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Colibri VF61 V1.1A&lt;/li&gt;&#xA;&lt;li&gt;Colibri Evaluation Board V3.1a / Iris V1.1&lt;/li&gt;&#xA;&lt;li&gt;Ambicom WL250N-USB (Ralink RT3070 chipset)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;steps-overview&#34;&gt;Steps Overview&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Assign a static IP to &lt;code&gt;wlan0&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;Configure &lt;code&gt;udhcpd&lt;/code&gt; as the DHCP server&lt;/li&gt;&#xA;&lt;li&gt;Configure &lt;code&gt;hostapd&lt;/code&gt; as the AP daemon&lt;/li&gt;&#xA;&lt;li&gt;Enable IP forwarding and NAT between &lt;code&gt;wlan0&lt;/code&gt; and &lt;code&gt;eth0&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;Wire it all up with systemd service files&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;1-static-ip-for-wlan0&#34;&gt;1. Static IP for wlan0&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ifconfig wlan0 192.168.0.1 up&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;2-udhcpd-configuration&#34;&gt;2. udhcpd configuration&lt;/h2&gt;&#xA;&lt;p&gt;&lt;code&gt;/etc/udhcpd.conf&lt;/code&gt;:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

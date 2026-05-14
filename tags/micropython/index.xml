@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Micropython on Bhuvan Chandra DV</title>
     <link>https://bhuvanchandradv.github.io/tags/micropython/</link>
     <description>Recent content in Micropython on Bhuvan Chandra DV</description>
     <generator>Hugo</generator>
-    <language>en-us</language>
+    <language>en</language>
     <lastBuildDate>Wed, 19 Jul 2017 08:15:33 +0800</lastBuildDate>
     <atom:link href="https://bhuvanchandradv.github.io/tags/micropython/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,27 +13,7 @@
       <link>https://bhuvanchandradv.github.io/blog/micropython-running-on-vf6xx_m4/</link>
       <pubDate>Wed, 19 Jul 2017 08:15:33 +0800</pubDate>
       <guid>https://bhuvanchandradv.github.io/blog/micropython-running-on-vf6xx_m4/</guid>
-      <description>&lt;p&gt;This is an experimental port of MicroPython for NXP VF6XX M4 Core.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/bhuvanchandra/micropython/tree/vf6xx_m4&#34;&gt;Source code&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Supported features include:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;REPL (Python prompt) over UART2&lt;/li&gt;
-&lt;li&gt;Garbage collector&lt;/li&gt;
-&lt;li&gt;GPIO, UART support&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;build&#34;&gt;Build&lt;/h2&gt;
-&lt;p&gt;The toolchain required is the Linaro ARM Embedded toolchain (e.g. 4.9 2015 Q3):&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;tar xjf &lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;HOME&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;/gcc-arm-none-eabi-4_9-2015q3-20150921-linux.tar.bz2
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;export PATH&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;$PATH:$HOME/gcc-arm-none-eabi-4_9-2015q3/bin/
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then build:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd &lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;HOME&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;/micropython/vf6xx
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;make
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;booting-the-m4-core&#34;&gt;Booting the M4 Core&lt;/h2&gt;
-&lt;p&gt;Two methods are supported:&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;1. From U-Boot using &lt;code&gt;bootaux&lt;/code&gt;:&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Colibri VFxx &lt;span style=&#34;color:#75715e&#34;&gt;# fatload mmc 0:1 ${loadaddr} firmware.elf&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Colibri VFxx &lt;span style=&#34;color:#75715e&#34;&gt;# bootaux ${loadaddr}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;2. From Linux using remoteproc:&lt;/strong&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;This is an experimental port of MicroPython for NXP VF6XX M4 Core.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/bhuvanchandra/micropython/tree/vf6xx_m4&#34;&gt;Source code&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Supported features include:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;REPL (Python prompt) over UART2&lt;/li&gt;&#xA;&lt;li&gt;Garbage collector&lt;/li&gt;&#xA;&lt;li&gt;GPIO, UART support&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;build&#34;&gt;Build&lt;/h2&gt;&#xA;&lt;p&gt;The toolchain required is the Linaro ARM Embedded toolchain (e.g. 4.9 2015 Q3):&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;tar xjf &lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;HOME&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;/gcc-arm-none-eabi-4_9-2015q3-20150921-linux.tar.bz2&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;export PATH&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;$PATH:$HOME/gcc-arm-none-eabi-4_9-2015q3/bin/&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then build:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd &lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;HOME&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;/micropython/vf6xx&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;make&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;booting-the-m4-core&#34;&gt;Booting the M4 Core&lt;/h2&gt;&#xA;&lt;p&gt;Two methods are supported:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;1. From U-Boot using &lt;code&gt;bootaux&lt;/code&gt;:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Colibri VFxx &lt;span style=&#34;color:#75715e&#34;&gt;# fatload mmc 0:1 ${loadaddr} firmware.elf&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Colibri VFxx &lt;span style=&#34;color:#75715e&#34;&gt;# bootaux ${loadaddr}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;2. From Linux using remoteproc:&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

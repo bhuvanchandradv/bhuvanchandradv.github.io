@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Networking on Bhuvan Chandra DV</title>
     <link>https://bhuvanchandradv.github.io/tags/networking/</link>
     <description>Recent content in Networking on Bhuvan Chandra DV</description>
     <generator>Hugo</generator>
-    <language>en-us</language>
+    <language>en</language>
     <lastBuildDate>Fri, 13 Jun 2014 11:55:43 +0800</lastBuildDate>
     <atom:link href="https://bhuvanchandradv.github.io/tags/networking/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,25 +13,7 @@
       <link>https://bhuvanchandradv.github.io/blog/wifi-hotspot-in-linux/</link>
       <pubDate>Fri, 13 Jun 2014 11:55:43 +0800</pubDate>
       <guid>https://bhuvanchandradv.github.io/blog/wifi-hotspot-in-linux/</guid>
-      <description>&lt;p&gt;How to configure an embedded Linux board (Colibri VF61) as a WiFi access point using &lt;code&gt;hostapd&lt;/code&gt;, &lt;code&gt;udhcpd&lt;/code&gt;, and &lt;code&gt;iptables&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;test-setup&#34;&gt;Test Setup&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Colibri VF61 V1.1A&lt;/li&gt;
-&lt;li&gt;Colibri Evaluation Board V3.1a / Iris V1.1&lt;/li&gt;
-&lt;li&gt;Ambicom WL250N-USB (Ralink RT3070 chipset)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;steps-overview&#34;&gt;Steps Overview&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;Assign a static IP to &lt;code&gt;wlan0&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Configure &lt;code&gt;udhcpd&lt;/code&gt; as the DHCP server&lt;/li&gt;
-&lt;li&gt;Configure &lt;code&gt;hostapd&lt;/code&gt; as the AP daemon&lt;/li&gt;
-&lt;li&gt;Enable IP forwarding and NAT between &lt;code&gt;wlan0&lt;/code&gt; and &lt;code&gt;eth0&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Wire it all up with systemd service files&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;1-static-ip-for-wlan0&#34;&gt;1. Static IP for wlan0&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ifconfig wlan0 192.168.0.1 up
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;2-udhcpd-configuration&#34;&gt;2. udhcpd configuration&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;/etc/udhcpd.conf&lt;/code&gt;:&lt;/p&gt;</description>
+      <description>&lt;p&gt;How to configure an embedded Linux board (Colibri VF61) as a WiFi access point using &lt;code&gt;hostapd&lt;/code&gt;, &lt;code&gt;udhcpd&lt;/code&gt;, and &lt;code&gt;iptables&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;test-setup&#34;&gt;Test Setup&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Colibri VF61 V1.1A&lt;/li&gt;&#xA;&lt;li&gt;Colibri Evaluation Board V3.1a / Iris V1.1&lt;/li&gt;&#xA;&lt;li&gt;Ambicom WL250N-USB (Ralink RT3070 chipset)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;steps-overview&#34;&gt;Steps Overview&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Assign a static IP to &lt;code&gt;wlan0&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;Configure &lt;code&gt;udhcpd&lt;/code&gt; as the DHCP server&lt;/li&gt;&#xA;&lt;li&gt;Configure &lt;code&gt;hostapd&lt;/code&gt; as the AP daemon&lt;/li&gt;&#xA;&lt;li&gt;Enable IP forwarding and NAT between &lt;code&gt;wlan0&lt;/code&gt; and &lt;code&gt;eth0&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;Wire it all up with systemd service files&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;1-static-ip-for-wlan0&#34;&gt;1. Static IP for wlan0&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ifconfig wlan0 192.168.0.1 up&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;2-udhcpd-configuration&#34;&gt;2. udhcpd configuration&lt;/h2&gt;&#xA;&lt;p&gt;&lt;code&gt;/etc/udhcpd.conf&lt;/code&gt;:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
