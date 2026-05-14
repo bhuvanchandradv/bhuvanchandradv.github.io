@@ -1,63 +1,39 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>/blog/</loc>
     <lastmod>2017-07-19T08:15:33+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/</loc>
+    <lastmod>2017-07-19T08:15:33+08:00</lastmod>
+  </url><url>
     <loc>/blog/micropython-running-on-nxp-vf6xx_m4-core/</loc>
     <lastmod>2017-07-19T08:15:33+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/blog/libsoc-examples/</loc>
     <lastmod>2017-05-18T11:55:50+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/contact/</loc>
     <lastmod>2017-03-09T13:23:28+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2017-03-09T13:23:28+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/about/</loc>
     <lastmod>2017-03-09T13:19:25+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/blog/knuckles-demo-application-fork-from-directfb-examples/</loc>
     <lastmod>2016-02-02T11:55:43+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/blog/understanding-linux-lcd-display-timings/</loc>
     <lastmod>2016-02-02T11:55:43+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/blog/point-of-sale-example-application-with-gtk-and-glade/</loc>
     <lastmod>2016-02-02T11:55:32+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/blog/configuring-embedded-linux-machine-as-wifi-hotspot/</loc>
     <lastmod>2014-06-13T11:55:43+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/categories/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/</loc>
   </url>
-  
 </urlset>

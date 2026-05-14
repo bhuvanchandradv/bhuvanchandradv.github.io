@@ -40,7 +40,7 @@
 
 
     
-    <link rel="stylesheet" href="/css/dark-style.css?t=1710775205">
+    <link rel="stylesheet" href="/css/dark-style.css?t=1778778059">
     
 
 
@@ -114,7 +114,7 @@
     <div class="container  fade-in two ">
         <h2 class="title is-1 top-pad strong-post-title"><a href="/blog/understanding-linux-lcd-display-timings/">Understanding Linux LCD display timings</a></h2>
             <div class="post-data">
-                Feb 2, 2027 |
+                Feb 2, 2016 |
                 3 minutes read
             </div>
 
@@ -167,33 +167,33 @@ Screen Height = Active frame height + VBP + VFP</li>
 <li><strong>HSYNC polarity</strong>: Value of HSYNC to indicate the start of a new line (active LOW or HIGH).</li>
 </ul>
 <p><em><strong>In some datasheets they may provide horizontal and vertical blanking period:</strong></em></p>
-<pre><code>Horizontal Blanking Period: HSYNC + HFP + HBP
+<pre tabindex="0"><code>Horizontal Blanking Period: HSYNC + HFP + HBP
 Vertical Blanking Period: VSYNC + VFP + VBP
 </code></pre><p>e.g.
 If Vertical blanking period was given with a typical value of 150, one can choose:</p>
-<pre><code>VSYNC:90
+<pre tabindex="0"><code>VSYNC:90
 VFP:45
 VBP:45
 </code></pre><p>All the LCD/TFT display related timings information values obtained from display datasheet need to be passed/mapped to the respective driver in the kernel which is responsible for display.</p>
 <p><em><strong>Adding timings to kernel data structure:</strong></em></p>
 <p>If using <em>modedb</em> for video modes one need to map the <em>fb_videomode</em> data structure with appropriate LCD timing values obtained from datasheet.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">struct</span> fb_videomode {
-	<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>name;   <span style="color:#75715e">// Descriptive name
-</span><span style="color:#75715e"></span>	u32 refresh;        <span style="color:#75715e">// Refresh rate in Hz
-</span><span style="color:#75715e"></span>	u32 xres;           <span style="color:#75715e">// resolution in x
-</span><span style="color:#75715e"></span>	u32 yres;           <span style="color:#75715e">// resolution in y
-</span><span style="color:#75715e"></span>	u32 pixclock;       <span style="color:#75715e">// Pixel clock in picoseconds
-</span><span style="color:#75715e"></span>	u32 left_margin;    <span style="color:#75715e">// Horizontal Back Porch
-</span><span style="color:#75715e"></span>	u32 right_margin;   <span style="color:#75715e">// Horizontal Front Porch
-</span><span style="color:#75715e"></span>	u32 upper_margin;   <span style="color:#75715e">// Vertical Back Porch
-</span><span style="color:#75715e"></span>	u32 lower_margin;   <span style="color:#75715e">// Vertical Front Porch
-</span><span style="color:#75715e"></span>	u32 hsync_len;      <span style="color:#75715e">// Hsync pulse width
-</span><span style="color:#75715e"></span>	u32 vsync_len;      <span style="color:#75715e">// Vsync pulse width
-</span><span style="color:#75715e"></span>	u32 sync;           <span style="color:#75715e">// Polarity on the Data Enable
-</span><span style="color:#75715e"></span>	u32 vmode;          <span style="color:#75715e">// Video Mode
-</span><span style="color:#75715e"></span>	u32 flag;           <span style="color:#75715e">// Usually 0
-</span><span style="color:#75715e"></span>};
-</code></pre></div><p>The naming convention in data structure and the data sheet timing values are slightly different.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> fb_videomode {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>name;   <span style="color:#75715e">// Descriptive name
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	u32 refresh;        <span style="color:#75715e">// Refresh rate in Hz
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	u32 xres;           <span style="color:#75715e">// resolution in x
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	u32 yres;           <span style="color:#75715e">// resolution in y
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	u32 pixclock;       <span style="color:#75715e">// Pixel clock in picoseconds
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	u32 left_margin;    <span style="color:#75715e">// Horizontal Back Porch
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	u32 right_margin;   <span style="color:#75715e">// Horizontal Front Porch
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	u32 upper_margin;   <span style="color:#75715e">// Vertical Back Porch
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	u32 lower_margin;   <span style="color:#75715e">// Vertical Front Porch
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	u32 hsync_len;      <span style="color:#75715e">// Hsync pulse width
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	u32 vsync_len;      <span style="color:#75715e">// Vsync pulse width
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	u32 sync;           <span style="color:#75715e">// Polarity on the Data Enable
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	u32 vmode;          <span style="color:#75715e">// Video Mode
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	u32 flag;           <span style="color:#75715e">// Usually 0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>};
+</span></span></code></pre></div><p>The naming convention in data structure and the data sheet timing values are slightly different.</p>
 <p><em>The following picture can be used as reference while converting:</em></p>
 <p><img src="https://github.com/bhuvanchandra/images-repo/raw/master/images-linux-display-timings/101353-linux_lcd_timing.jpg" alt="lcd-timings"></p>
 <ul>

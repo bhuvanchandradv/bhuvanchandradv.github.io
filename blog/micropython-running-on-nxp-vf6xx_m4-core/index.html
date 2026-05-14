@@ -40,7 +40,7 @@
 
 
     
-    <link rel="stylesheet" href="/css/dark-style.css?t=1710775205">
+    <link rel="stylesheet" href="/css/dark-style.css?t=1778778059">
     
 
 
@@ -114,7 +114,7 @@
     <div class="container  fade-in two ">
         <h2 class="title is-1 top-pad strong-post-title"><a href="/blog/micropython-running-on-nxp-vf6xx_m4-core/">MicroPython running on NXP VF6XX_M4 core</a></h2>
             <div class="post-data">
-                Jul 7, 19077 |
+                Jul 19, 2017 |
                 5 minutes read
             </div>
 
@@ -159,21 +159,21 @@
 <h2 id="build-instructions">Build instructions</h2>
 <p>The tool chain required for the build is the Linaro provided ARM Embedded toolchain, e.g. 4.9 2015 Q3 update. Unpack the toolchain to an appropriate location.</p>
 <p>e.g. your home directory:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ tar xjf <span style="color:#e6db74">${</span>HOME<span style="color:#e6db74">}</span>/gcc-arm-none-eabi-4_9-2015q3-20150921-linux.tar.bz2
-...
-$ export PATH<span style="color:#f92672">=</span>$PATH:$HOME/gcc-arm-none-eabi-4_9-2015q3/bin/
-$ arm-none-eabi-gcc --version
-arm-none-eabi-gcc <span style="color:#f92672">(</span>GNU Tools <span style="color:#66d9ef">for</span> ARM Embedded Processors<span style="color:#f92672">)</span> 4.9.3 <span style="color:#ae81ff">20150529</span> <span style="color:#f92672">(</span>release<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>ARM/embedded-4_9-branch revision 227977<span style="color:#f92672">]</span>
-Copyright <span style="color:#f92672">(</span>C<span style="color:#f92672">)</span> <span style="color:#ae81ff">2014</span> Free Software Foundation, Inc.
-This is free software; see the source <span style="color:#66d9ef">for</span> copying conditions.  There is NO
-warranty; not even <span style="color:#66d9ef">for</span> MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-</code></pre></div><p>Then, to build MicroPython for the VF6XX, just run:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cd <span style="color:#e6db74">${</span>HOME<span style="color:#e6db74">}</span>/micropython/vf6xx
-$ make
-$ ...
-</code></pre></div><p>This will produce binary images in the <code>build/</code> subdirectory.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ tar xjf <span style="color:#e6db74">${</span>HOME<span style="color:#e6db74">}</span>/gcc-arm-none-eabi-4_9-2015q3-20150921-linux.tar.bz2
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>$ export PATH<span style="color:#f92672">=</span>$PATH:$HOME/gcc-arm-none-eabi-4_9-2015q3/bin/
+</span></span><span style="display:flex;"><span>$ arm-none-eabi-gcc --version
+</span></span><span style="display:flex;"><span>arm-none-eabi-gcc <span style="color:#f92672">(</span>GNU Tools <span style="color:#66d9ef">for</span> ARM Embedded Processors<span style="color:#f92672">)</span> 4.9.3 <span style="color:#ae81ff">20150529</span> <span style="color:#f92672">(</span>release<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>ARM/embedded-4_9-branch revision 227977<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>Copyright <span style="color:#f92672">(</span>C<span style="color:#f92672">)</span> <span style="color:#ae81ff">2014</span> Free Software Foundation, Inc.
+</span></span><span style="display:flex;"><span>This is free software; see the source <span style="color:#66d9ef">for</span> copying conditions.  There is NO
+</span></span><span style="display:flex;"><span>warranty; not even <span style="color:#66d9ef">for</span> MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+</span></span></code></pre></div><p>Then, to build MicroPython for the VF6XX, just run:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cd <span style="color:#e6db74">${</span>HOME<span style="color:#e6db74">}</span>/micropython/vf6xx
+</span></span><span style="display:flex;"><span>$ make
+</span></span><span style="display:flex;"><span>$ ...
+</span></span></code></pre></div><p>This will produce binary images in the <code>build/</code> subdirectory.</p>
 <h2 id="first-start">First start</h2>
-<h2 id="running-a-firmware-on-cortex-m4-">Running a Firmware on Cortex-M4</h2>
+<h2 id="running-a-firmware-on-cortex-m4">Running a Firmware on Cortex-M4</h2>
 <p>There are two possible ways to boot the Cortex-M4 core on Vybrid:</p>
 <ol>
 <li>From U-Boot using <code>m4boot</code>/<code>bootaux</code></li>
@@ -185,25 +185,25 @@ In release image 2.7 Beta2, support for bootaux has been added including elf boo
 <p><strong>Note:</strong>
 The FreeRTOS firmware uses Colibri UART_B as its debugging console. Make sure to connect UART_B to your debugging host and start a serial terminal emulator with a baud rate of 115200 on the serial port.</p>
 <p>Linux disables unused clocks by default but it is not aware what clocks are used by the Cortex-M4 core. Use the &lsquo;clk_ignore_unused&rsquo; kernel parameter to avoid clocks getting accidentally disabled. The power management suspend code and the Cortex-M4 firmware typically use the same SRAM location leading to a resource conflict. To prevent the suspend code from overwriting the M4 firmware and/or remoteproc from not being able to load, the SRAM driver should be disabled by passing &lsquo;initcall_blacklist=sram_init&rsquo; kernel parameter:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Colibri VFxx <span style="color:#75715e"># setenv defargs &#39;clk_ignore_unused initcall_blacklist=sram_init&#39;</span>
-</code></pre></div><p>By default, our Linux device tree uses UART_B too, which leads to a external abort when the Linux kernel tries to access UART_B. It is recommended to alter the device tree and disable UART_B using the status property (see <a href="901439e4-9c90-11e4-8c91-9e9dd95319f8">[Device Tree Customization]</a>). Temporary, the following fdt_fixup command can be use in U-Boot:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Colibri VFxx <span style="color:#75715e"># setenv fdt_fixup &#39;fdt addr ${fdt_addr_r} &amp;&amp; fdt rm /soc/aips-bus@40000000/serial@40029000&#39;</span>
-Colibri VFxx <span style="color:#75715e"># saveenv</span>
-</code></pre></div><h3 id="booting-from-u-boot-">Booting from U-Boot</h3>
-<h4 id="using-bootaux-">Using bootaux</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Colibri VFxx <span style="color:#75715e"># setenv defargs &#39;clk_ignore_unused initcall_blacklist=sram_init&#39;</span>
+</span></span></code></pre></div><p>By default, our Linux device tree uses UART_B too, which leads to a external abort when the Linux kernel tries to access UART_B. It is recommended to alter the device tree and disable UART_B using the status property (see <a href="901439e4-9c90-11e4-8c91-9e9dd95319f8">[Device Tree Customization]</a>). Temporary, the following fdt_fixup command can be use in U-Boot:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Colibri VFxx <span style="color:#75715e"># setenv fdt_fixup &#39;fdt addr ${fdt_addr_r} &amp;&amp; fdt rm /soc/aips-bus@40000000/serial@40029000&#39;</span>
+</span></span><span style="display:flex;"><span>Colibri VFxx <span style="color:#75715e"># saveenv</span>
+</span></span></code></pre></div><h3 id="booting-from-u-boot">Booting from U-Boot</h3>
+<h4 id="using-bootaux">Using bootaux</h4>
 <p>With images 2.7b2 and newer you can boot the Cortex-M4 using <code>bootaux</code>. This command has been adopted from Colibri iMX7, and allows to boot <code>bin</code> and <code>elf</code> files directly.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Colibri VFxx <span style="color:#75715e"># fatload mmc 0:1 ${loadaddr} firmware.elf</span>
-<span style="color:#f92672">(</span>Or<span style="color:#f92672">)</span>
-Colibri VFxx <span style="color:#75715e"># tftp ${loadaddr} firmware.elf</span>
-...
-Colibri VFxx <span style="color:#75715e"># bootaux ${loadaddr}</span>
-<span style="color:#75715e">## Starting auxiliary core at 0x1F0002E1 ...</span>
-Colibri VFxx #
-</code></pre></div><h5 id="store-a-firmware-on-flash-and-run-it-on-boot-">Store a Firmware on Flash and Run it on Boot</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Colibri VFxx <span style="color:#75715e"># fatload mmc 0:1 ${loadaddr} firmware.elf</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>Or<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Colibri VFxx <span style="color:#75715e"># tftp ${loadaddr} firmware.elf</span>
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>Colibri VFxx <span style="color:#75715e"># bootaux ${loadaddr}</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Starting auxiliary core at 0x1F0002E1 ...</span>
+</span></span><span style="display:flex;"><span>Colibri VFxx <span style="color:#75715e">#</span>
+</span></span></code></pre></div><h5 id="store-a-firmware-on-flash-and-run-it-on-boot">Store a Firmware on Flash and Run it on Boot</h5>
 <p>Use the following commands to create a UBI volume to store the Cortex-M4 firmware (to free up space for this volume this process will remove the rootfs volume!). The update scripts are required for this steps, make sure you have a SD-card with the image prepared and in your SD-card slot.</p>
-<pre><code>Colibri VFxx # run setupdate
+<pre tabindex="0"><code>Colibri VFxx # run setupdate
 ...
-Colibri VFxx # setenv create_m4firmware 'ubi part ubi &amp;&amp; ubi remove rootfs &amp;&amp; ubi create m4firmware 0xe0000 static &amp;&amp; run prepare_ubi'
+Colibri VFxx # setenv create_m4firmware &#39;ubi part ubi &amp;&amp; ubi remove rootfs &amp;&amp; ubi create m4firmware 0xe0000 static &amp;&amp; run prepare_ubi&#39;
 ...
 Colibri VFxx # run create_m4firmware
 ...
@@ -214,28 +214,28 @@ Colibri VFxx # ubi write ${loadaddr} m4firmware ${filesize}
 Colibri VFxx # run update_rootfs
 ...
 </code></pre><p>Once the UBI volume is in place, a new firmware can be written by just using <code>ubi write</code>:</p>
-<pre><code>Colibri VFxx # ubi part ubi
+<pre tabindex="0"><code>Colibri VFxx # ubi part ubi
 ...
 Colibri VFxx # fatload mmc 0:1 ${loadaddr} firmware.elf
 ...
 Colibri VFxx # ubi write ${loadaddr} m4firmware ${filesize}
 ...
 </code></pre><p>You need to extend the default ubiboot command to load and execute the firmware before starting Linux:</p>
-<pre><code>Colibri VFxx # setenv ubiboot 'run setup; setenv bootargs ${defargs} ${ubiargs} ${setupargs} ${vidargs}; echo Booting from NAND...; ubi part ubi &amp;&amp; ubi read ${loadaddr} m4firmware &amp;&amp; bootaux ${loadaddr} &amp;&amp; ubi read ${kernel_addr_r} kernel &amp;&amp; ubi read ${fdt_addr_r} dtb &amp;&amp; run fdt_fixup &amp;&amp; bootz ${kernel_addr_r} - ${fdt_addr_r}'
+<pre tabindex="0"><code>Colibri VFxx # setenv ubiboot &#39;run setup; setenv bootargs ${defargs} ${ubiargs} ${setupargs} ${vidargs}; echo Booting from NAND...; ubi part ubi &amp;&amp; ubi read ${loadaddr} m4firmware &amp;&amp; bootaux ${loadaddr} &amp;&amp; ubi read ${kernel_addr_r} kernel &amp;&amp; ubi read ${fdt_addr_r} dtb &amp;&amp; run fdt_fixup &amp;&amp; bootz ${kernel_addr_r} - ${fdt_addr_r}&#39;
 Colibri VFxx # saveenv
-</code></pre><h3 id="booting-from-linux-">Booting from Linux</h3>
+</code></pre><h3 id="booting-from-linux">Booting from Linux</h3>
 <p>In our release image (since v2.6.1), by default remoteproc is disabled to allow Cortex-M4 to start from U-Boot. To start Cortex-M4 using remoteproc, deploy the .elf to &lsquo;/lib/firmware&rsquo; directory and load the remoteproc kernel modules. To auto load the remoteproc driver during boot, manually add vf610_cm4_rproc.conf file in &lsquo;/etc/modules-load.d/&rsquo;
 with the remoteproc driver specified in the conf file. To have the conf deployed with the image, uncomment the line <a href="http://git.toradex.com/cgit/meta-toradex-nxp.git/tree/recipes-kernel/linux/linux-toradex_4.4.bb?h=jethro-next&amp;id=624df62851d3b80cac0a2c9ac7745c91ebe0fe81#n16" title="">here</a> in the kernel recipe and re-build the image with <a href="http://developer.toradex.com/knowledge-base/board-support-package/openembedded-(core)" title="">OpenEmbedded</a>.</p>
-<pre><code>root@colibri-vf:~# cat /etc/modules-load.d/vf610_cm4_rproc.conf
+<pre tabindex="0"><code>root@colibri-vf:~# cat /etc/modules-load.d/vf610_cm4_rproc.conf
 vf610_cm4_rproc
 </code></pre><p>NOTE: remoteproc by default looks for <code>freertos-rpmsg.elf</code> binary in /lib/firmware.
 To load a custom .elf one can create a symlink so that <code>freertos-rpmsg.elf</code> points to the actual .elf.</p>
-<pre><code>root@colibri-vf:~# cd /lib/firmware/
+<pre tabindex="0"><code>root@colibri-vf:~# cd /lib/firmware/
 root@colibri-vf:~# ln -s firmware.elf freertos-rpmsg.elf
-</code></pre><pre><code>root@colibri-vf:~# dmesg|grep remoteproc
+</code></pre><pre tabindex="0"><code>root@colibri-vf:~# dmesg|grep remoteproc
 [    4.897291]  remoteproc0: vf610_m4 is available
 [    4.909798]  remoteproc0: Note: remoteproc is still under development and considered experimental.
-[    4.934253]  remoteproc0: THE BINARY FORMAT IS NOT YET FINALIZED, and backward compatibility isn't yet guaranteed.
+[    4.934253]  remoteproc0: THE BINARY FORMAT IS NOT YET FINALIZED, and backward compatibility isn&#39;t yet guaranteed.
 [    4.983452]  remoteproc0: powering up vf610_m4
 [    5.069934]  remoteproc0: Booting fw image freertos-rpmsg.elf, size 160544
 [    5.084654]  remoteproc0: No resource table found, continuing...
@@ -246,8 +246,8 @@ root@colibri-vf:~# ln -s firmware.elf freertos-rpmsg.elf
 <li>Baudrate: 115200</li>
 </ul>
 <p>e.g:</p>
-<pre><code>MicroPython v1.9.1-166-ge190711f on 2017-07-19; Colibri VF61 with VF6XX_M4
-&gt;&gt;&gt; print (&quot;Hello World!&quot;)
+<pre tabindex="0"><code>MicroPython v1.9.1-166-ge190711f on 2017-07-19; Colibri VF61 with VF6XX_M4
+&gt;&gt;&gt; print (&#34;Hello World!&#34;)
 Hello World!
 &gt;&gt;&gt;
 </code></pre><hr>

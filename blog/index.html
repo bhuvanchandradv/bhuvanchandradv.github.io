@@ -40,7 +40,7 @@
 
 
     
-    <link rel="stylesheet" href="/css/dark-style.css?t=1710775205">
+    <link rel="stylesheet" href="/css/dark-style.css?t=1778778059">
     
 
 
@@ -113,10 +113,82 @@
     
     <h2 class="title is-2 top-pad">Latest Post</h2>
          
-        <div class="summary">Jun 6, 13067
+        <div class="summary">Jun 13, 2014
             <h3 class="title is-3 strong-post-title"><a href="/blog/configuring-embedded-linux-machine-as-wifi-hotspot/">Configuring Embedded Linux machine as WiFi Hotspot</a></h3>
                 <div class="markdown">
-                Configuring Embedded Linux machine as WiFi Hotspot Test Setup:  Colibri VF61 V1.1A Colibri Evaluation Board V3.1a/Iris V1.1 Ambicom WL250N-USB Wireless 802.11b/g/n (V1.0a)  During boot or upon insertion the following kernel messages identify Ambicom WL250N-USB stick: [ 10.153746] usb 1-1.1: new high speed USB device number 3 using fsl-ehci [ 10.299135] usb 1-1.1: New USB device found, idVendor=148f, idProduct=3070 [ 10.309882] usb 1-1.1: New USB device strings: Mfr=1, Product=2, SerialNumber=3 [ 10.
+                <h2 id="configuring-embedded-linux-machine-as-wifi-hotspot"><!-- raw HTML omitted -->Configuring Embedded Linux machine as WiFi Hotspot<!-- raw HTML omitted --></h2>
+<h3 id="test-setup"><!-- raw HTML omitted -->Test Setup:<!-- raw HTML omitted --></h3>
+<ul>
+<li><a href="http://developer.toradex.com/products/colibri-vf61">Colibri VF61 V1.1A</a></li>
+<li><a href="http://developer.toradex.com/products/colibri-som-family/carrier-boards">Colibri Evaluation Board V3.1a/Iris V1.1</a></li>
+<li><a href="http://developer.toradex.com/products/wl250n-usb-wifi">Ambicom WL250N-USB Wireless 802.11b/g/n (V1.0a)</a></li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/bhuvanchandra/images-repo/master/images-ap/evalBoard_3.1a_test_setup.jpg" alt="Hardware setup"></p>
+<h5 id="during-boot-or-upon-insertion-the-following-kernel-messages-identify-ambicom-wl250n-usb-stick">During boot or upon insertion the following kernel messages identify Ambicom WL250N-USB stick:</h5>
+<pre tabindex="0"><code>[   10.153746] usb 1-1.1: new high speed USB device number 3 using fsl-ehci
+[   10.299135] usb 1-1.1: New USB device found, idVendor=148f, idProduct=3070
+[   10.309882] usb 1-1.1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[   10.324597] usb 1-1.1: Product: 802.11 n WLAN
+[   10.332875] usb 1-1.1: Manufacturer: Ralink
+[   10.340887] usb 1-1.1: SerialNumber: 1.0
+[   10.384713] Registered led device: rt2800usb-phy0::radio
+[   10.384904] Registered led device: rt2800usb-phy0::assoc
+[   10.385062] Registered led device: rt2800usb-phy0::quality
+</code></pre><h5 id="in-user-space-it-can-be-identified-by-lsusb-as-follows">In user space it can be identified by <em>lsusb</em> as follows:</h5>
+<pre tabindex="0"><code>root@colibri-vf:~# lsusb
+…..
+Bus 001 Device 003: ID 148f:3070 Ralink Technology, Corp. RT2870/RT3070 Wireless Adapter
+…..
+</code></pre><h5 id="ethernetnetwork">Ethernet/Network:</h5>
+<pre tabindex="0"><code>[   20.491401] eth0: Freescale FEC PHY driver [Micrel KS8041] (mii_bus:phy_addr=2:01, irq=-1)
+[   20.517857] ADDRCONF(NETDEV_UP): eth0: link is not ready
+[   22.500404] ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[    7.721280] eth0: no IPv6 routers present
+</code></pre><pre tabindex="0"><code>root@colibri-vf:~# ifconfig eth0
+eth0      Link encap:Ethernet  HWaddr 00:14:2D:49:3D:8D  
+          inet addr:10.18.0.116  Bcast:10.18.3.255  Mask:255.255.252.0
+          inet6 addr: fe80::214:2dff:fe49:3d8d/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:31427 errors:0 dropped:24 overruns:0 frame:0
+          TX packets:2186 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:3677223 (3.5 MiB)  TX bytes:580461 (566.8 KiB)
+</code></pre><pre tabindex="0"><code>root@colibri-vf:~# connmanctl services
+*AO Wired                { ethernet_00142d493d8d_cable }
+root@colibri-vf:~# connmanctl services ethernet_00142d493d8d_cable                                                                                                                                           
+[ ethernet_00142d493d8d_cable ]
+
+
+  Type = ethernet
+  Security = [ ]
+  State = online
+  Favorite = True
+  Immutable = False
+  AutoConnect = True
+  Name = Wired
+  Ethernet = { Method=auto Interface=eth0 Address=00:14:2D:49:3D:8D MTU=1500 }
+  IPv4 = { Method=dhcp Address=10.18.0.116 Netmask=255.255.252.0 Gateway=10.18.0.1 }
+  IPv4.Configuration = { Method=dhcp }
+  IPv6 = { }
+  IPv6.Configuration = { Method=auto Privacy=disabled }
+  Nameservers = [ 10.18.0.2 10.0.0.2 ]
+  Nameservers.Configuration = [ ]
+  Timeservers = [ 10.18.0.1 ]
+  Timeservers.Configuration = [ ]
+  Domains = [ toradex.int ]
+  Domains.Configuration = [ ]
+  Proxy = { Method=direct }
+  Proxy.Configuration = { }
+  Provider = { }
+</code></pre><h5 id="to-configure-a-hotspot-requires-several-steps"><!-- raw HTML omitted -->To configure a hotspot requires several steps:<!-- raw HTML omitted --></h5>
+<ul>
+<li>Configure the wireless adapter with IP address</li>
+<li>Configure UDHCP server</li>
+<li>Install and configure hostap-daemon  the user space daemon for IEEE 802.11 management</li>
+<li>Configure IP routing between wlan and ethernet</li>
+</ul>
+<h5 id="configure-the-wireless-adapter-with-ip-address"><!-- raw HTML omitted -->Configure the wireless adapter with IP address:<!-- raw HTML omitted --></h5>
+<p>Setting static IP for wlan0 manually :</p>
                 
                 <a href="/blog/configuring-embedded-linux-machine-as-wifi-hotspot/">...Read More</a>
                 
@@ -130,37 +202,37 @@
         
             
                 <li class="post-item">
-    <span><a href="/blog/configuring-embedded-linux-machine-as-wifi-hotspot/">Configuring Embedded Linux machine as WiFi Hotspot</a></span> - <span>Jun 6, 13067</span>
+    <span><a href="/blog/configuring-embedded-linux-machine-as-wifi-hotspot/">Configuring Embedded Linux machine as WiFi Hotspot</a></span> - <span>Jun 13, 2014</span>
 </li>
             
         
             
                 <li class="post-item">
-    <span><a href="/blog/point-of-sale-example-application-with-gtk-and-glade/">Point of Sale example application with GTK&#43; and Glade</a></span> - <span>Feb 2, 2027</span>
+    <span><a href="/blog/point-of-sale-example-application-with-gtk-and-glade/">Point of Sale example application with GTK&#43; and Glade</a></span> - <span>Feb 2, 2016</span>
 </li>
             
         
             
                 <li class="post-item">
-    <span><a href="/blog/knuckles-demo-application-fork-from-directfb-examples/">Knuckles demo application fork from DirectFB examples</a></span> - <span>Feb 2, 2027</span>
+    <span><a href="/blog/knuckles-demo-application-fork-from-directfb-examples/">Knuckles demo application fork from DirectFB examples</a></span> - <span>Feb 2, 2016</span>
 </li>
             
         
             
                 <li class="post-item">
-    <span><a href="/blog/understanding-linux-lcd-display-timings/">Understanding Linux LCD display timings</a></span> - <span>Feb 2, 2027</span>
+    <span><a href="/blog/understanding-linux-lcd-display-timings/">Understanding Linux LCD display timings</a></span> - <span>Feb 2, 2016</span>
 </li>
             
         
             
                 <li class="post-item">
-    <span><a href="/blog/libsoc-examples/">libsoc examples</a></span> - <span>May 5, 18057</span>
+    <span><a href="/blog/libsoc-examples/">libsoc examples</a></span> - <span>May 18, 2017</span>
 </li>
             
         
             
                 <li class="post-item">
-    <span><a href="/blog/micropython-running-on-nxp-vf6xx_m4-core/">MicroPython running on NXP VF6XX_M4 core</a></span> - <span>Jul 7, 19077</span>
+    <span><a href="/blog/micropython-running-on-nxp-vf6xx_m4-core/">MicroPython running on NXP VF6XX_M4 core</a></span> - <span>Jul 19, 2017</span>
 </li>
             
         
