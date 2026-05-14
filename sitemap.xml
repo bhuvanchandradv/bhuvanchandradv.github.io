@@ -2,38 +2,89 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/blog/</loc>
+    <loc>https://bhuvanchandradv.github.io/about/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bhuvanchandradv.github.io/</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://bhuvanchandradv.github.io/tags/arm/</loc>
     <lastmod>2017-07-19T08:15:33+08:00</lastmod>
   </url><url>
-    <loc>/</loc>
+    <loc>https://bhuvanchandradv.github.io/blog/</loc>
     <lastmod>2017-07-19T08:15:33+08:00</lastmod>
   </url><url>
-    <loc>/blog/micropython-running-on-nxp-vf6xx_m4-core/</loc>
+    <loc>https://bhuvanchandradv.github.io/tags/embedded/</loc>
     <lastmod>2017-07-19T08:15:33+08:00</lastmod>
   </url><url>
-    <loc>/blog/libsoc-examples/</loc>
+    <loc>https://bhuvanchandradv.github.io/tags/linux/</loc>
+    <lastmod>2017-07-19T08:15:33+08:00</lastmod>
+  </url><url>
+    <loc>https://bhuvanchandradv.github.io/tags/micropython/</loc>
+    <lastmod>2017-07-19T08:15:33+08:00</lastmod>
+  </url><url>
+    <loc>https://bhuvanchandradv.github.io/blog/micropython-running-on-vf6xx_m4/</loc>
+    <lastmod>2017-07-19T08:15:33+08:00</lastmod>
+  </url><url>
+    <loc>https://bhuvanchandradv.github.io/tags/</loc>
+    <lastmod>2017-07-19T08:15:33+08:00</lastmod>
+  </url><url>
+    <loc>https://bhuvanchandradv.github.io/tags/toradex/</loc>
+    <lastmod>2017-07-19T08:15:33+08:00</lastmod>
+  </url><url>
+    <loc>https://bhuvanchandradv.github.io/tags/gpio/</loc>
     <lastmod>2017-05-18T11:55:50+08:00</lastmod>
   </url><url>
-    <loc>/contact/</loc>
+    <loc>https://bhuvanchandradv.github.io/tags/i2c/</loc>
+    <lastmod>2017-05-18T11:55:50+08:00</lastmod>
+  </url><url>
+    <loc>https://bhuvanchandradv.github.io/blog/libsoc-examples/</loc>
+    <lastmod>2017-05-18T11:55:50+08:00</lastmod>
+  </url><url>
+    <loc>https://bhuvanchandradv.github.io/tags/spi/</loc>
+    <lastmod>2017-05-18T11:55:50+08:00</lastmod>
+  </url><url>
+    <loc>https://bhuvanchandradv.github.io/tags/yocto/</loc>
+    <lastmod>2017-05-18T11:55:50+08:00</lastmod>
+  </url><url>
+    <loc>https://bhuvanchandradv.github.io/contact/</loc>
     <lastmod>2017-03-09T13:23:28+08:00</lastmod>
   </url><url>
-    <loc>/about/</loc>
-    <lastmod>2017-03-09T13:19:25+08:00</lastmod>
-  </url><url>
-    <loc>/blog/knuckles-demo-application-fork-from-directfb-examples/</loc>
+    <loc>https://bhuvanchandradv.github.io/tags/device-tree/</loc>
     <lastmod>2016-02-02T11:55:43+08:00</lastmod>
   </url><url>
-    <loc>/blog/understanding-linux-lcd-display-timings/</loc>
+    <loc>https://bhuvanchandradv.github.io/tags/directfb/</loc>
     <lastmod>2016-02-02T11:55:43+08:00</lastmod>
   </url><url>
-    <loc>/blog/point-of-sale-example-application-with-gtk-and-glade/</loc>
+    <loc>https://bhuvanchandradv.github.io/tags/display/</loc>
+    <lastmod>2016-02-02T11:55:43+08:00</lastmod>
+  </url><url>
+    <loc>https://bhuvanchandradv.github.io/blog/directfb-knuckles-example/</loc>
+    <lastmod>2016-02-02T11:55:43+08:00</lastmod>
+  </url><url>
+    <loc>https://bhuvanchandradv.github.io/blog/linux-lcd-timings/</loc>
+    <lastmod>2016-02-02T11:55:43+08:00</lastmod>
+  </url><url>
+    <loc>https://bhuvanchandradv.github.io/tags/gtk/</loc>
     <lastmod>2016-02-02T11:55:32+08:00</lastmod>
   </url><url>
-    <loc>/blog/configuring-embedded-linux-machine-as-wifi-hotspot/</loc>
+    <loc>https://bhuvanchandradv.github.io/blog/gtk-example_pos/</loc>
+    <lastmod>2016-02-02T11:55:32+08:00</lastmod>
+  </url><url>
+    <loc>https://bhuvanchandradv.github.io/blog/wifi-hotspot-in-linux/</loc>
     <lastmod>2014-06-13T11:55:43+08:00</lastmod>
   </url><url>
-    <loc>/categories/</loc>
+    <loc>https://bhuvanchandradv.github.io/tags/networking/</loc>
+    <lastmod>2014-06-13T11:55:43+08:00</lastmod>
   </url><url>
-    <loc>/tags/</loc>
+    <loc>https://bhuvanchandradv.github.io/tags/systemd/</loc>
+    <lastmod>2014-06-13T11:55:43+08:00</lastmod>
+  </url><url>
+    <loc>https://bhuvanchandradv.github.io/tags/wifi/</loc>
+    <lastmod>2014-06-13T11:55:43+08:00</lastmod>
+  </url><url>
+    <loc>https://bhuvanchandradv.github.io/categories/</loc>
+  </url><url>
+    <loc>https://bhuvanchandradv.github.io/search/</loc>
   </url>
 </urlset>

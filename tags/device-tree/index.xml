@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Device-Tree on Bhuvan Chandra DV</title>
+    <link>https://bhuvanchandradv.github.io/tags/device-tree/</link>
+    <description>Recent content in Device-Tree on Bhuvan Chandra DV</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 02 Feb 2016 11:55:43 +0800</lastBuildDate>
+    <atom:link href="https://bhuvanchandradv.github.io/tags/device-tree/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Understanding Linux LCD Display Timings</title>
+      <link>https://bhuvanchandradv.github.io/blog/linux-lcd-timings/</link>
+      <pubDate>Tue, 02 Feb 2016 11:55:43 +0800</pubDate>
+      <guid>https://bhuvanchandradv.github.io/blog/linux-lcd-timings/</guid>
+      <description>&lt;h3 id=&#34;mapping-lcdtft-display-timings-to-linux-kernel-data-structures&#34;&gt;Mapping LCD/TFT display timings to Linux Kernel data structures&lt;/h3&gt;
+&lt;p&gt;Most LCD/TFT display datasheets provide the following timing information:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Horizontal Back Porch (HBP)&lt;/strong&gt;: Number of pixel clk pulses between HSYNC signal and the first valid pixel data.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Horizontal Front Porch (HFP)&lt;/strong&gt;: Number of pixel clk pulses between the last valid pixel data in the line and the next hsync pulse.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vertical Back Porch (VBP)&lt;/strong&gt;: Number of lines (HSYNC pulses) from a VSYNC signal to the first valid line.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vertical Front Porch (VFP)&lt;/strong&gt;: Number of lines (HSYNC pulses) between the last valid line of the frame and the next VSYNC pulse.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;VSYNC pulse width&lt;/strong&gt;: Number of HSYNC pulses when a VSYNC signal is active.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;HSYNC pulse width&lt;/strong&gt;: Number of pixel clk pulses when a HSYNC signal is active.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Active frame width&lt;/strong&gt;: Horizontal resolution.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Active frame height&lt;/strong&gt;: Vertical resolution.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Screen width&lt;/strong&gt;: &lt;code&gt;Active frame width + HBP + HFP&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Screen height&lt;/strong&gt;: &lt;code&gt;Active frame height + VBP + VFP&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;VSYNC polarity&lt;/strong&gt;: Value of VSYNC to indicate the start of a new frame (active LOW or HIGH)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;HSYNC polarity&lt;/strong&gt;: Value of HSYNC to indicate the start of a new line (active LOW or HIGH)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Some datasheets provide horizontal and vertical blanking period instead:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

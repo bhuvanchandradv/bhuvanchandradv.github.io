@@ -1,11 +1,124 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Tags on Introduction</title>
-    <link>/tags/</link>
-    <description>Recent content in Tags on Introduction</description>
+    <title>Tags on Bhuvan Chandra DV</title>
+    <link>https://bhuvanchandradv.github.io/tags/</link>
+    <description>Recent content in Tags on Bhuvan Chandra DV</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 19 Jul 2017 08:15:33 +0800</lastBuildDate>
+    <atom:link href="https://bhuvanchandradv.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Arm</title>
+      <link>https://bhuvanchandradv.github.io/tags/arm/</link>
+      <pubDate>Wed, 19 Jul 2017 08:15:33 +0800</pubDate>
+      <guid>https://bhuvanchandradv.github.io/tags/arm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Embedded</title>
+      <link>https://bhuvanchandradv.github.io/tags/embedded/</link>
+      <pubDate>Wed, 19 Jul 2017 08:15:33 +0800</pubDate>
+      <guid>https://bhuvanchandradv.github.io/tags/embedded/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>https://bhuvanchandradv.github.io/tags/linux/</link>
+      <pubDate>Wed, 19 Jul 2017 08:15:33 +0800</pubDate>
+      <guid>https://bhuvanchandradv.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Micropython</title>
+      <link>https://bhuvanchandradv.github.io/tags/micropython/</link>
+      <pubDate>Wed, 19 Jul 2017 08:15:33 +0800</pubDate>
+      <guid>https://bhuvanchandradv.github.io/tags/micropython/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Toradex</title>
+      <link>https://bhuvanchandradv.github.io/tags/toradex/</link>
+      <pubDate>Wed, 19 Jul 2017 08:15:33 +0800</pubDate>
+      <guid>https://bhuvanchandradv.github.io/tags/toradex/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gpio</title>
+      <link>https://bhuvanchandradv.github.io/tags/gpio/</link>
+      <pubDate>Thu, 18 May 2017 11:55:50 +0800</pubDate>
+      <guid>https://bhuvanchandradv.github.io/tags/gpio/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>I2c</title>
+      <link>https://bhuvanchandradv.github.io/tags/i2c/</link>
+      <pubDate>Thu, 18 May 2017 11:55:50 +0800</pubDate>
+      <guid>https://bhuvanchandradv.github.io/tags/i2c/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Spi</title>
+      <link>https://bhuvanchandradv.github.io/tags/spi/</link>
+      <pubDate>Thu, 18 May 2017 11:55:50 +0800</pubDate>
+      <guid>https://bhuvanchandradv.github.io/tags/spi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Yocto</title>
+      <link>https://bhuvanchandradv.github.io/tags/yocto/</link>
+      <pubDate>Thu, 18 May 2017 11:55:50 +0800</pubDate>
+      <guid>https://bhuvanchandradv.github.io/tags/yocto/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Device-Tree</title>
+      <link>https://bhuvanchandradv.github.io/tags/device-tree/</link>
+      <pubDate>Tue, 02 Feb 2016 11:55:43 +0800</pubDate>
+      <guid>https://bhuvanchandradv.github.io/tags/device-tree/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Directfb</title>
+      <link>https://bhuvanchandradv.github.io/tags/directfb/</link>
+      <pubDate>Tue, 02 Feb 2016 11:55:43 +0800</pubDate>
+      <guid>https://bhuvanchandradv.github.io/tags/directfb/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Display</title>
+      <link>https://bhuvanchandradv.github.io/tags/display/</link>
+      <pubDate>Tue, 02 Feb 2016 11:55:43 +0800</pubDate>
+      <guid>https://bhuvanchandradv.github.io/tags/display/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gtk</title>
+      <link>https://bhuvanchandradv.github.io/tags/gtk/</link>
+      <pubDate>Tue, 02 Feb 2016 11:55:32 +0800</pubDate>
+      <guid>https://bhuvanchandradv.github.io/tags/gtk/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Networking</title>
+      <link>https://bhuvanchandradv.github.io/tags/networking/</link>
+      <pubDate>Fri, 13 Jun 2014 11:55:43 +0800</pubDate>
+      <guid>https://bhuvanchandradv.github.io/tags/networking/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Systemd</title>
+      <link>https://bhuvanchandradv.github.io/tags/systemd/</link>
+      <pubDate>Fri, 13 Jun 2014 11:55:43 +0800</pubDate>
+      <guid>https://bhuvanchandradv.github.io/tags/systemd/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wifi</title>
+      <link>https://bhuvanchandradv.github.io/tags/wifi/</link>
+      <pubDate>Fri, 13 Jun 2014 11:55:43 +0800</pubDate>
+      <guid>https://bhuvanchandradv.github.io/tags/wifi/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
